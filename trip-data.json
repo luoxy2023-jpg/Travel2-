@@ -1,0 +1,4483 @@
+{
+  "$schema": "./schemas/trip-data.schema.json",
+  "schemaVersion": "2.0-lite",
+  "config": {
+    "schemaVersion": "1.0.0",
+    "modules": {
+      "flights": true,
+      "overview": true,
+      "itinerary": true,
+      "todo": true,
+      "driving": false,
+      "ledger": true
+    },
+    "language": "zh-CN",
+    "persistence": {
+      "mode": "local"
+    }
+  },
+  "metadata": {
+    "tripId": "italy-20270208",
+    "title": "意大利双人旅行 · 未预订规划",
+    "language": "zh-CN",
+    "assets": {
+      "routeMaps": [
+        "assets/maps/templates/template-05-river-highland.webp",
+        "assets/maps/templates/template-04-urban.webp"
+      ]
+    }
+  },
+  "trip": {
+    "status": "draft",
+    "startDate": "2027-02-08",
+    "endDate": "2027-02-16",
+    "dayCount": 9,
+    "nightCountAway": 8,
+    "countries": [
+      "意大利",
+      "梵蒂冈"
+    ],
+    "primaryDestinationCountries": [
+      "意大利",
+      "梵蒂冈"
+    ],
+    "citiesAndAreas": [
+      "米兰",
+      "科莫湖",
+      "佛罗伦萨",
+      "罗马",
+      "梵蒂冈"
+    ],
+    "routeSummary": "米兰落地 → 科莫湖 → 米兰 → 佛罗伦萨 → 罗马 → 梵蒂冈 → 米兰",
+    "groupSize": 2,
+    "planningStatus": "unbooked"
+  },
+  "flightJourneys": [
+    {
+      "id": "outbound",
+      "status": "planned",
+      "bookingStatus": "unbooked"
+    },
+    {
+      "id": "return",
+      "status": "planned",
+      "bookingStatus": "unbooked"
+    }
+  ],
+  "flights": [
+    {
+      "id": "f1",
+      "journeyId": "outbound",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "中国国际航空"
+      },
+      "flightNumber": "CA1426",
+      "departure": {
+        "airportCode": "CTU",
+        "city": "成都",
+        "date": "2027-02-08",
+        "time": "22:00",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "PEK",
+        "city": "北京",
+        "date": "2027-02-09",
+        "time": "00:45",
+        "utcOffset": "+08:00"
+      }
+    },
+    {
+      "id": "f2",
+      "journeyId": "outbound",
+      "sequence": 2,
+      "airline": {
+        "nameZh": "中国国际航空"
+      },
+      "flightNumber": "CA949",
+      "departure": {
+        "airportCode": "PEK",
+        "city": "北京",
+        "date": "2027-02-09",
+        "time": "02:15",
+        "utcOffset": "+08:00"
+      },
+      "arrival": {
+        "airportCode": "MXP",
+        "city": "米兰",
+        "date": "2027-02-09",
+        "time": "06:30",
+        "utcOffset": "+01:00"
+      }
+    },
+    {
+      "id": "f3",
+      "journeyId": "return",
+      "sequence": 1,
+      "airline": {
+        "nameZh": "中国国际航空"
+      },
+      "flightNumber": "CA446",
+      "departure": {
+        "airportCode": "MXP",
+        "city": "米兰",
+        "date": "2027-02-15",
+        "time": "12:00",
+        "utcOffset": "+01:00"
+      },
+      "arrival": {
+        "airportCode": "TFU",
+        "city": "成都",
+        "date": "2027-02-16",
+        "time": "05:40",
+        "utcOffset": "+08:00"
+      }
+    }
+  ],
+  "accommodations": [],
+  "groundTransport": {
+    "rentalCar": null,
+    "rentalChecklist": [],
+    "drivingNotes": [],
+    "drivingReferenceLinks": [],
+    "plannedRoadLegs": [],
+    "publicTransitAndRail": [
+      {
+        "title": "机场至米兰｜先寄存行李",
+        "station": "Malpensa Aeroporto T1（马尔彭萨机场T1） → Milano Centrale（米兰中央车站） → 候选酒店",
+        "time": "目标08:30–10:30，按入境进度调整",
+        "duration": "机场列车及候车、市内步行预留约1.5–2小时",
+        "service": "机场列车，车次待确认",
+        "note": "提前确认酒店能寄存；不假定到店即可入住。",
+        "status": "规划未预订，2027准确时刻和票价待查。",
+        "links": [
+          {
+            "label": "机场列车官方查询",
+            "url": "https://www.malpensaexpress.it/"
+          }
+        ]
+      },
+      {
+        "title": "去程｜米兰 → 科莫",
+        "station": "Milano Centrale（米兰中央车站） → Como S. Giovanni（科莫圣乔瓦尼车站）",
+        "time": "目标10:30左右离开米兰",
+        "duration": "参考40–60分钟，具体以官方班次为准",
+        "service": "优先Trenord直达车，编号待确认",
+        "note": "使用Trenord官网／App或车站售票机查询；用户参考票价5–7欧元未核实。",
+        "status": "未预订；日期库存、时刻、票价待确认。",
+        "links": [
+          {
+            "label": "Trenord官方检索",
+            "url": "https://www.trenord.it/"
+          }
+        ]
+      },
+      {
+        "title": "返程｜瓦伦纳 → 米兰",
+        "station": "Varenna-Esino（瓦伦纳埃西诺车站） → Milano Centrale（米兰中央车站）",
+        "time": "目标17:00左右出发，18–19点回米兰",
+        "duration": "参考约1小时以上，具体按班次",
+        "service": "Trenord，车次号待确认",
+        "note": "这是不同起终点的环线，购买米兰→Como（科莫）和Varenna（瓦伦纳）→米兰两段单程票，不买Como（科莫）原路往返票。",
+        "status": "未预订；复核当日末班及施工替代信息。",
+        "links": [
+          {
+            "label": "Trenord瓦伦纳线路",
+            "url": "https://www.trenord.it/en/routes-and-timetables/most-searched-lines/milano-central-station-varenna-esino/"
+          }
+        ]
+      },
+      {
+        "day": 3,
+        "title": "高铁｜米兰 → 佛罗伦萨",
+        "station": "Milano Centrale（米兰中央车站） → Firenze Santa Maria Novella（佛罗伦萨新圣母玛利亚车站）",
+        "time": "建议出发窗口：09:00–10:00；午间抵达",
+        "duration": "规划预留约2小时，实际随班次变化",
+        "service": "优先直达 Frecciarossa 或 Italo；车次号待确认",
+        "note": "选择同一运营商的一班直达车；建议提前30分钟到站，两人同一订单选相邻座位。",
+        "links": [
+          {
+            "label": "Trenitalia官方检索",
+            "url": "https://www.trenitalia.com/en.html"
+          },
+          {
+            "label": "Italo官方检索",
+            "url": "https://www.italotreno.com/en/"
+          }
+        ],
+        "status": "均为规划、未预订。未实时核实2027指定日期的班次和库存；车次号、准确到发时间、票价、退改规则以官方检索结果为准。"
+      },
+      {
+        "day": 5,
+        "title": "高铁｜佛罗伦萨 → 罗马",
+        "station": "Firenze Santa Maria Novella（佛罗伦萨新圣母玛利亚车站） → Roma Termini（罗马特米尼车站）",
+        "time": "建议09:00左右出发，争取11:00–11:30抵达，给下午斗兽场预约留出缓冲",
+        "duration": "约1.5–2小时，按所选班次确认",
+        "service": "优先直达 Frecciarossa 或 Italo；车次号待确认",
+        "note": "检索时核对Roma Termini（罗马特米尼车站），避免不留意订成Roma Tiburtina；到站后先去酒店。 如无法找到合适早班高铁，需重新安排斗兽场，不能强行压缩入场缓冲。",
+        "links": [
+          {
+            "label": "Trenitalia官方检索",
+            "url": "https://www.trenitalia.com/en.html"
+          },
+          {
+            "label": "Italo官方检索",
+            "url": "https://www.italotreno.com/en/"
+          }
+        ],
+        "status": "均为规划、未预订。未实时核实2027指定日期的班次和库存；车次号、准确到发时间、票价、退改规则以官方检索结果为准。"
+      },
+      {
+        "day": 7,
+        "title": "高铁｜罗马 → 米兰",
+        "station": "Roma Termini（罗马特米尼车站） → Milano Centrale（米兰中央车站）",
+        "time": "建议09:00–10:00从罗马出发，目标13:00–14:00抵达米兰",
+        "duration": "规划预留约3–3.5小时，按停站变化",
+        "service": "优先直达 Frecciarossa 或 Italo；车次号待确认",
+        "note": "为下午米兰大教堂和长廊留出余量；当日上午不再安排罗马景点，实际直达车次与门票衔接待确认。",
+        "links": [
+          {
+            "label": "Trenitalia官方检索",
+            "url": "https://www.trenitalia.com/en.html"
+          },
+          {
+            "label": "Italo官方检索",
+            "url": "https://www.italotreno.com/en/"
+          }
+        ],
+        "status": "均为规划、未预订。未实时核实2027指定日期的班次和库存；车次号、准确到发时间、票价、退改规则以官方检索结果为准。"
+      },
+      {
+        "day": 8,
+        "title": "机场列车｜米兰返程",
+        "station": "Milano Centrale（米兰中央车站） → Malpensa Aeroporto T1（马尔彭萨机场T1）",
+        "time": "建议出发窗口：07:00–08:00；目标09:00前抵达T1",
+        "duration": "当前官方参考约51分钟，2027时刻待核实",
+        "service": "Malpensa Express／RE51方向；具体列车号待确认",
+        "note": "12:00国际航班；前晚复核列车、机场值机截止时间及可能的施工信息。不要选T2作为下车站。",
+        "links": [
+          {
+            "label": "机场列车官方时刻与购票",
+            "url": "https://www.malpensaexpress.it/en/lines-and-timetable/how-to-reach-malpensa/reaching-terminal-1/"
+          }
+        ],
+        "status": "均为规划、未预订。未实时核实2027指定日期的班次和库存；车次号、准确到发时间、票价、退改规则以官方检索结果为准。"
+      }
+    ]
+  },
+  "days": [
+    {
+      "day": 1,
+      "date": "2027-02-08",
+      "title": "出发成都 ｜ 宿：飞机上",
+      "locations": [],
+      "schedule": [
+        {
+          "id": "s1",
+          "time": "",
+          "type": "flight",
+          "text": "22:00 成都双流T2出发，CA1426前往北京。（除截图航班外均为建议安排，交通、酒店及门票待确认。）"
+        }
+      ],
+      "photos": [],
+      "railPlanning": [],
+      "overnightCity": "飞机上",
+      "routeStops": []
+    },
+    {
+      "day": 2,
+      "date": "2027-02-09",
+      "title": "科莫湖环线 · Como（科莫） → Bellagio（贝拉焦） → Varenna（瓦伦纳） ｜ 宿：米兰",
+      "locations": [
+        "米兰机场",
+        "科莫市",
+        "Bellagio（贝拉焦）",
+        "Varenna（瓦伦纳）",
+        "米兰"
+      ],
+      "schedule": [
+        {
+          "id": "s2",
+          "time": "06:30",
+          "type": "flight",
+          "text": "抵达米兰MXP T1；入境、取行李和早餐预留2–3小时。不能套用参考攻略08:00从米兰出发的时间。"
+        },
+        {
+          "id": "lake-hotel",
+          "time": "08:30–10:30（规划窗口）",
+          "type": "train",
+          "placeIds": [
+            "mxp",
+            "milano-centrale"
+          ],
+          "text": "乘机场列车到Milano Centrale（米兰中央车站），先去附近候选酒店寄存行李，不以提前入住为前提；须事先确认酒店可寄存。若机场处理或寄存耗时较长，湖区环线需缩短。"
+        },
+        {
+          "id": "lake-train",
+          "time": "10:30–11:30（建议）",
+          "type": "train",
+          "placeIds": [
+            "milano-centrale",
+            "como-sg"
+          ],
+          "text": "Milano Centrale（米兰中央车站） → Como S. Giovanni（科莫圣乔瓦尼车站），优先直达车。参考车程40–60分钟，准确车次与票价待查；不写死5–7欧元。"
+        },
+        {
+          "id": "lake-como",
+          "time": "11:30–12:30（弹性）",
+          "type": "walk",
+          "placeIds": [
+            "como-sg",
+            "como-lake",
+            "como-pier"
+          ],
+          "text": "从Como S. Giovanni（科莫圣乔瓦尼车站）步行到湖边和当日码头，含找路、购票预留20–30分钟，再简餐和湖滨短逛。注意冬季Como（科莫）码头可能调整，按官方当日公告。"
+        },
+        {
+          "id": "lake-bellagio",
+          "time": "中午至14:30（按船班）",
+          "type": "boat",
+          "placeIds": [
+            "como-pier",
+            "bellagio"
+          ],
+          "text": "Como（科莫） → Bellagio（贝拉焦）优先考虑合适的快船，抵达后逛小巷、喝咖啡。参考所称约1小时并非所有船型都适用，普通慢船可能明显更久；必须先匹配冬季实际船班。"
+        },
+        {
+          "id": "lake-varenna",
+          "time": "14:30–16:30（条件成立时）",
+          "type": "boat",
+          "placeIds": [
+            "bellagio",
+            "varenna"
+          ],
+          "text": "Bellagio（贝拉焦） → Varenna（瓦伦纳），参考船程约15分钟仅作规划估计；具体码头、发船时刻和耗时待官方核实。Varenna（瓦伦纳）湖滨短逛，日落前后尽早前往车站。若衔接不佳或疲劳，取消Varenna（瓦伦纳）并采用已核实的返程交通。"
+        },
+        {
+          "id": "lake-back",
+          "time": "17:00–19:00（目标窗口）",
+          "type": "train",
+          "placeIds": [
+            "varenna",
+            "varenna-esino",
+            "milano-centrale"
+          ],
+          "text": "步行到Varenna-Esino（瓦伦纳埃西诺车站）乘车返回Milano Centrale（米兰中央车站），再回酒店入住休息。返程规划约1小时以上，实际车次、末班与是否有工程替代接驳需复核。18–19点回米兰是目标，不是保证。"
+        },
+        {
+          "id": "budget",
+          "time": "",
+          "type": "note",
+          "text": "机票参考报价：5797元／人往返，两人合计11594元，尚未预订，未计入实际支出。全程为行程规划，酒店、火车及门票均未预订；住宿预算待补充。"
+        }
+      ],
+      "photos": [],
+      "routeStops": [
+        {
+          "id": "mxp",
+          "name": "米兰马尔彭萨机场"
+        },
+        {
+          "id": "milano-centrale",
+          "name": "米兰中央车站"
+        },
+        {
+          "id": "como-sg",
+          "name": "Como S. Giovanni（科莫圣乔瓦尼车站）车站"
+        },
+        {
+          "id": "como-lake",
+          "name": "科莫湖 · 科莫镇湖滨"
+        },
+        {
+          "id": "como-pier",
+          "name": "Como（科莫）游船码头"
+        },
+        {
+          "id": "bellagio",
+          "name": "Bellagio（贝拉焦）"
+        },
+        {
+          "id": "varenna",
+          "name": "Varenna（瓦伦纳）"
+        },
+        {
+          "id": "varenna-esino",
+          "name": "Varenna-Esino（瓦伦纳埃西诺车站）车站"
+        },
+        {
+          "id": "milano-centrale",
+          "name": "米兰中央车站"
+        }
+      ],
+      "googleRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=45.63%2C8.72&destination=45.4838%2C9.2036&waypoints=45.485%2C9.204%7C45.4838%2C9.2036%7C45.8097%2C9.0724%7C45.814%2C9.079%7C45.814%2C9.08%7C45.987%2C9.261%7C46.011%2C9.284%7C46.017%2C9.284%7C45.485%2C9.204&travelmode=transit",
+      "railPlanning": [
+        {
+          "title": "机场至米兰｜先寄存行李",
+          "station": "Malpensa Aeroporto T1（马尔彭萨机场T1） → Milano Centrale（米兰中央车站） → 候选酒店",
+          "time": "目标08:30–10:30，按入境进度调整",
+          "duration": "机场列车及候车、市内步行预留约1.5–2小时",
+          "service": "机场列车，车次待确认",
+          "note": "提前确认酒店能寄存；不假定到店即可入住。",
+          "status": "规划未预订，2027准确时刻和票价待查。",
+          "links": [
+            {
+              "label": "机场列车官方查询",
+              "url": "https://www.malpensaexpress.it/"
+            }
+          ]
+        },
+        {
+          "title": "去程｜米兰 → 科莫",
+          "station": "Milano Centrale（米兰中央车站） → Como S. Giovanni（科莫圣乔瓦尼车站）",
+          "time": "目标10:30左右离开米兰",
+          "duration": "参考40–60分钟，具体以官方班次为准",
+          "service": "优先Trenord直达车，编号待确认",
+          "note": "使用Trenord官网／App或车站售票机查询；用户参考票价5–7欧元未核实。",
+          "status": "未预订；日期库存、时刻、票价待确认。",
+          "links": [
+            {
+              "label": "Trenord官方检索",
+              "url": "https://www.trenord.it/"
+            }
+          ]
+        },
+        {
+          "title": "返程｜瓦伦纳 → 米兰",
+          "station": "Varenna-Esino（瓦伦纳埃西诺车站） → Milano Centrale（米兰中央车站）",
+          "time": "目标17:00左右出发，18–19点回米兰",
+          "duration": "参考约1小时以上，具体按班次",
+          "service": "Trenord，车次号待确认",
+          "note": "这是不同起终点的环线，购买米兰→Como（科莫）和Varenna（瓦伦纳）→米兰两段单程票，不买Como（科莫）原路往返票。",
+          "status": "未预订；复核当日末班及施工替代信息。",
+          "links": [
+            {
+              "label": "Trenord瓦伦纳线路",
+              "url": "https://www.trenord.it/en/routes-and-timetables/most-searched-lines/milano-central-station-varenna-esino/"
+            }
+          ]
+        }
+      ],
+      "bookingPlanning": [
+        {
+          "title": "两段船班｜环线成立的前提",
+          "details": [
+            "已确认官方发布覆盖2027年2月的冬季航运公告，但尚未锁定2月9日具体Como（科莫）→Bellagio（贝拉焦）→Varenna（瓦伦纳）接续。",
+            "先查到达Como（科莫）后能衔接的快船，再确认Bellagio（贝拉焦）→Varenna（瓦伦纳）和Varenna（瓦伦纳）回米兰火车，不能靠参考船程判断一定来得及。",
+            "用户提醒：火车票建议提前一天购买；船票可考虑当天现场购买，但不是一定有票。应先确认船班和快船售票规则。",
+            "若没有合适冬季船班、天气不好或航班延误，缩减为Como（科莫）湖滨短游，或Como（科莫）＋Bellagio（贝拉焦）；返程先核实，不能临时假定有车。"
+          ],
+          "links": [
+            {
+              "label": "官方冬季船班与码头公告",
+              "url": "https://www.navigazionelaghi.it/en/"
+            }
+          ]
+        }
+      ],
+      "overnightCity": "米兰"
+    },
+    {
+      "day": 3,
+      "date": "2027-02-10",
+      "title": "米兰 → 佛罗伦萨 ｜ 宿：佛罗伦萨",
+      "locations": [
+        "米兰中央车站",
+        "佛罗伦萨SMN车站",
+        "佛罗伦萨住宿待选",
+        "圣母百花大教堂",
+        "领主广场",
+        "老桥",
+        "米开朗琪罗广场（选做）"
+      ],
+      "schedule": [
+        {
+          "id": "s3",
+          "time": "",
+          "type": "note",
+          "text": "上午乘高铁前往Firenze SMN（佛罗伦萨新圣母玛利亚车站），预留约半天转场。下午圣母百花大教堂外观、领主广场、老桥；体力允许再去米开朗琪罗广场。住宿建议：SMN车站至历史中心之间，连住2晚，双床独立卫浴；未预订。（除截图航班外均为建议安排，交通、酒店及门票待确认。）"
+        }
+      ],
+      "photos": [],
+      "routeStops": [
+        {
+          "id": "milano-centrale",
+          "name": "米兰中央车站"
+        },
+        {
+          "id": "smn",
+          "name": "佛罗伦萨SMN车站"
+        },
+        {
+          "id": "duomo-florence",
+          "name": "圣母百花大教堂"
+        },
+        {
+          "id": "signoria",
+          "name": "领主广场"
+        },
+        {
+          "id": "ponte",
+          "name": "老桥"
+        },
+        {
+          "id": "michelangelo",
+          "name": "米开朗琪罗广场（选做）"
+        }
+      ],
+      "googleRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=45.485%2C9.204&destination=43.7629%2C11.2651&waypoints=43.7765%2C11.248%7C43.7739%2C11.2487%7C43.7731%2C11.256%7C43.7696%2C11.2558%7C43.768%2C11.2532&travelmode=transit",
+      "railPlanning": [
+        {
+          "day": 3,
+          "title": "高铁｜米兰 → 佛罗伦萨",
+          "station": "Milano Centrale（米兰中央车站） → Firenze Santa Maria Novella（佛罗伦萨新圣母玛利亚车站）",
+          "time": "建议出发窗口：09:00–10:00；午间抵达",
+          "duration": "规划预留约2小时，实际随班次变化",
+          "service": "优先直达 Frecciarossa 或 Italo；车次号待确认",
+          "note": "选择同一运营商的一班直达车；建议提前30分钟到站，两人同一订单选相邻座位。",
+          "links": [
+            {
+              "label": "Trenitalia官方检索",
+              "url": "https://www.trenitalia.com/en.html"
+            },
+            {
+              "label": "Italo官方检索",
+              "url": "https://www.italotreno.com/en/"
+            }
+          ],
+          "status": "均为规划、未预订。未实时核实2027指定日期的班次和库存；车次号、准确到发时间、票价、退改规则以官方检索结果为准。"
+        }
+      ],
+      "overnightCity": "佛罗伦萨"
+    },
+    {
+      "day": 4,
+      "date": "2027-02-11",
+      "title": "佛罗伦萨 · 艺术与慢游 ｜ 宿：佛罗伦萨",
+      "locations": [
+        "佛罗伦萨住宿待选",
+        "乌菲兹美术馆",
+        "佛罗伦萨中央市场",
+        "圣洛伦佐街区",
+        "老桥"
+      ],
+      "schedule": [
+        {
+          "id": "uffizi-visit",
+          "time": "09:00（建议）",
+          "type": "attraction",
+          "placeId": "uffizi",
+          "text": "乌菲兹美术馆：建议预约09:00左右入场，参观约3小时；尚未预订，实际入场时段待确认。",
+          "ticketIds": [
+            "ticket-uffizi"
+          ]
+        },
+        {
+          "id": "s4",
+          "time": "",
+          "type": "note",
+          "text": "上午乌菲兹美术馆，建议预留约3小时，门票与2027开放安排待确认。下午中央市场午餐、圣洛伦佐街区及阿诺河散步。住宿：佛罗伦萨原酒店，未预订。（除截图航班外均为建议安排，交通、酒店及门票待确认。）"
+        }
+      ],
+      "photos": [],
+      "routeStops": [
+        {
+          "id": "uffizi",
+          "name": "乌菲兹美术馆"
+        },
+        {
+          "id": "market",
+          "name": "佛罗伦萨中央市场"
+        },
+        {
+          "id": "sanlorenzo",
+          "name": "圣洛伦佐街区"
+        },
+        {
+          "id": "ponte",
+          "name": "老桥"
+        }
+      ],
+      "googleRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=43.7739%2C11.2487&destination=43.768%2C11.2532&waypoints=43.7678%2C11.2553%7C43.7763%2C11.2532%7C43.7749%2C11.2539&travelmode=transit",
+      "railPlanning": [],
+      "bookingPlanning": [
+        {
+          "title": "乌菲兹｜本次计划参观",
+          "details": [
+            "建议预约2027年2月11日09:00左右入场，预留约3小时；此为建议时段，未锁定库存。",
+            "当前官网常规开放：周二至周日08:15–18:30，周一闭馆；2027临时调整需复核。",
+            "当前普通提前购票参考29欧／人，两人58欧；2027票价与优惠资格以结算页为准。",
+            "从乌菲兹官网进入tickets.uffizi.it，选择日期、时段和两位参观者；按证件准确填写姓名。",
+            "当前官方使用实名票，入场证件须与票面姓名一致。建议提前20–30分钟到场作为行程缓冲。",
+            "2027年2月的开放购票日期与具体库存尚未核实；不能把无搜索结果当作售罄。",
+            "本计划仅安排乌菲兹本馆，未含瓦萨里走廊。"
+          ],
+          "links": [
+            {
+              "label": "官方预约入口",
+              "url": "https://tickets.uffizi.it/"
+            },
+            {
+              "label": "开放时间与现行票价",
+              "url": "https://www.uffizi.it/en/the-uffizi"
+            },
+            {
+              "label": "官方实名与票务说明",
+              "url": "https://www.coopculture.it/en/products/gli-uffizi-entrance-ticket/"
+            }
+          ]
+        },
+        {
+          "title": "学院美术馆｜可选，不计入默认路线",
+          "details": [
+            "若想看《大卫》，可用15:00左右时段替换当天中央市场与街区慢游；预留1–1.5小时，不要在原行程上继续叠加。",
+            "官网强烈建议预约，并指向B-Ticket；从官方门票页进入，核对日期、2位成人和实际票价。",
+            "2027库存、票价与放票日期尚未核实；官网当前页面存在不同年份价目文字，因此不固定填入价格。",
+            "仅作备选，未预订，尚未加入路线地图。"
+          ],
+          "links": [
+            {
+              "label": "学院美术馆官方购票说明",
+              "url": "https://www.galleriaaccademiafirenze.it/en/tickets/"
+            },
+            {
+              "label": "官网预约与入馆信息",
+              "url": "https://www.galleriaaccademiafirenze.it/en/information/"
+            }
+          ]
+        }
+      ],
+      "overnightCity": "佛罗伦萨"
+    },
+    {
+      "day": 5,
+      "date": "2027-02-12",
+      "title": "佛罗伦萨 → 罗马 · 斗兽场 ｜ 宿：罗马",
+      "locations": [
+        "佛罗伦萨SMN车站",
+        "罗马Termini车站",
+        "罗马住宿待选",
+        "斗兽场",
+        "古罗马广场",
+        "万神殿"
+      ],
+      "schedule": [
+        {
+          "id": "s5",
+          "time": "",
+          "type": "note",
+          "text": "建议选09:00左右高铁，约午间抵达Roma Termini（罗马特米尼车站）后去酒店寄存行李。优先预约14:00左右斗兽场；古罗马广场是否入内按冬季开放时间及车程决定，不赶场。若火车晚点则需调整门票，不把衔接视为保证。晚餐后万神殿周边外观散步。罗马住罗马住宿待选，未预订。"
+        }
+      ],
+      "photos": [],
+      "routeStops": [
+        {
+          "id": "smn",
+          "name": "佛罗伦萨SMN车站"
+        },
+        {
+          "id": "termini",
+          "name": "罗马Termini车站"
+        },
+        {
+          "id": "colosseum",
+          "name": "斗兽场"
+        },
+        {
+          "id": "forum",
+          "name": "古罗马广场"
+        },
+        {
+          "id": "pantheon",
+          "name": "万神殿"
+        }
+      ],
+      "googleRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=43.7765%2C11.248&destination=41.8986%2C12.4769&waypoints=41.901%2C12.501%7C41.9005%2C12.4936%7C41.8902%2C12.4922%7C41.8925%2C12.4853&travelmode=transit",
+      "railPlanning": [
+        {
+          "day": 5,
+          "title": "高铁｜佛罗伦萨 → 罗马",
+          "station": "Firenze Santa Maria Novella（佛罗伦萨新圣母玛利亚车站） → Roma Termini（罗马特米尼车站）",
+          "time": "建议09:00左右出发，争取11:00–11:30抵达，给下午斗兽场预约留出缓冲",
+          "duration": "约1.5–2小时，按所选班次确认",
+          "service": "优先直达 Frecciarossa 或 Italo；车次号待确认",
+          "note": "检索时核对Roma Termini（罗马特米尼车站），避免不留意订成Roma Tiburtina；到站后先去酒店。 如无法找到合适早班高铁，需重新安排斗兽场，不能强行压缩入场缓冲。",
+          "links": [
+            {
+              "label": "Trenitalia官方检索",
+              "url": "https://www.trenitalia.com/en.html"
+            },
+            {
+              "label": "Italo官方检索",
+              "url": "https://www.italotreno.com/en/"
+            }
+          ],
+          "status": "均为规划、未预订。未实时核实2027指定日期的班次和库存；车次号、准确到发时间、票价、退改规则以官方检索结果为准。"
+        }
+      ],
+      "bookingPlanning": [
+        {
+          "title": "斗兽场｜移到2月12日下午，建议14:00",
+          "details": [
+            "需先确认上午高铁能按计划抵达，再匹配预约时段；未订票。",
+            "冬季开放时间较短，古罗马广场内部游览作为弹性项目；无法预约合适时段时需要重排。"
+          ],
+          "links": [
+            {
+              "label": "斗兽场官方开放与票务",
+              "url": "https://colosseo.it/en/opening-times-and-tickets/"
+            }
+          ]
+        }
+      ],
+      "overnightCity": "罗马"
+    },
+    {
+      "day": 6,
+      "date": "2027-02-13",
+      "title": "梵蒂冈一日 · 博物馆与圣彼得 ｜ 宿：罗马",
+      "locations": [
+        "梵蒂冈博物馆",
+        "西斯廷礼拜堂（馆内）",
+        "圣彼得大教堂",
+        "圣彼得广场"
+      ],
+      "schedule": [
+        {
+          "id": "vatican-transfer",
+          "time": "07:30（建议）",
+          "type": "transfer",
+          "text": "从罗马酒店出发，前往梵蒂冈博物馆票面指定入口。建议留约60–90分钟交通和排队缓冲；需按预约时间调整。"
+        },
+        {
+          "id": "vatican-visit",
+          "time": "09:00–13:00（建议）",
+          "type": "attraction",
+          "placeIds": [
+            "vatican-museums",
+            "sistine"
+          ],
+          "text": "梵蒂冈博物馆 → 西斯廷礼拜堂，建议预约09:00左右，参观约3–4小时；礼拜堂为博物馆参观路线的一部分，未预订。",
+          "ticketIds": [
+            "ticket-vatican"
+          ]
+        },
+        {
+          "id": "vatican-lunch",
+          "time": "13:00–14:00",
+          "type": "rest",
+          "text": "午餐和休息。按普通个人票规划从博物馆公共出口离开，再步行绕至圣彼得广场；不假设能使用礼拜堂直通教堂的通道。"
+        },
+        {
+          "id": "stpeter-visit",
+          "time": "14:00–17:00（弹性）",
+          "type": "attraction",
+          "placeIds": [
+            "stpeter-square",
+            "stpeter"
+          ],
+          "text": "圣彼得广场 → 安检 → 圣彼得大教堂。预留排队时间，遇宗教活动按官方安排调整；当天不安排穹顶攀登。",
+          "ticketIds": [
+            "ticket-stpeter"
+          ]
+        },
+        {
+          "id": "vatican-hotel",
+          "time": "傍晚",
+          "type": "note",
+          "text": "返回罗马原酒店休息；住宿仍为罗马住宿待选，无需搬酒店，未预订。"
+        }
+      ],
+      "photos": [],
+      "routeStops": [
+        {
+          "id": "vatican-museums",
+          "name": "梵蒂冈博物馆"
+        },
+        {
+          "id": "sistine",
+          "name": "西斯廷礼拜堂（馆内）"
+        },
+        {
+          "id": "stpeter",
+          "name": "圣彼得大教堂"
+        },
+        {
+          "id": "stpeter-square",
+          "name": "圣彼得广场"
+        }
+      ],
+      "googleRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=41.9065%2C12.4536&destination=41.9022%2C12.4573&waypoints=41.9029%2C12.4545%7C41.9022%2C12.4539&travelmode=walking",
+      "railPlanning": [],
+      "bookingPlanning": [
+        {
+          "title": "梵蒂冈博物馆预约｜2月13日，建议09:00",
+          "details": [
+            "计划2027年2月13日09:00左右入场，尚未预订，日期库存及价格待官方确认。",
+            "唯一官方在线购票入口：tickets.museivaticani.va；从官网进入选择博物馆与西斯廷礼拜堂参观产品、2位参观者及时间。",
+            "当前官网常规周一至周六开放，2027闭馆日历已提供，临时宗教活动与关闭仍需出发前复核。",
+            "不硬写“提前60天必放票”；放票窗口与实际库存尚未核实。",
+            "西斯廷礼拜堂不另安排一张独立门票；按所选博物馆产品包含范围核对。",
+            "着装覆盖肩膀和膝盖，参观规则以官网为准。"
+          ],
+          "links": [
+            {
+              "label": "博物馆唯一官方订票入口",
+              "url": "https://tickets.museivaticani.va/"
+            },
+            {
+              "label": "2026–2027官方闭馆日历",
+              "url": "https://www.museivaticani.va/content/dam/museivaticani/pdf/utilities/calendario_musei.pdf"
+            },
+            {
+              "label": "参观安排",
+              "url": "https://www.museivaticani.va/content/museivaticani/en/organizza-visita.html"
+            }
+          ]
+        },
+        {
+          "title": "圣彼得大教堂｜与博物馆分开安排",
+          "details": [
+            "下午到广场后另排安检，不假定博物馆票包含直接通行。",
+            "预留安检和宗教活动调整余量；不安排穹顶攀登。"
+          ],
+          "links": [
+            {
+              "label": "大教堂官方时间与活动",
+              "url": "https://www.basilicasanpietro.va/en/opening-hours"
+            },
+            {
+              "label": "官方安检说明",
+              "url": "https://www.basilicasanpietro.va/en/faq/are-there-security-checks-at-the-entrance"
+            }
+          ]
+        }
+      ],
+      "overnightCity": "罗马"
+    },
+    {
+      "day": 7,
+      "date": "2027-02-14",
+      "title": "罗马 → 米兰 · 大教堂与长廊 ｜ 宿：米兰",
+      "locations": [
+        "罗马",
+        "米兰",
+        "米兰大教堂",
+        "长廊"
+      ],
+      "schedule": [
+        {
+          "id": "s7",
+          "time": "",
+          "type": "note",
+          "text": "上午酒店退房后乘高铁回米兰，建议09:00–10:00左右从Roma Termini（罗马特米尼车站）出发，目标13:00–14:00左右到Milano Centrale（米兰中央车站）。取消原定罗马上午短游，先到酒店放行李和简餐，下午游览米兰大教堂与长廊。"
+        },
+        {
+          "id": "milan-optional-evening",
+          "time": "回米兰后可选",
+          "type": "note",
+          "text": "米兰大教堂广场与长廊改为2月14日晚可选外观短游。若到达较晚或疲劳则取消；不保证进入大教堂或登顶。返程当天不安排景点。"
+        },
+        {
+          "id": "milan-duomo-14",
+          "time": "15:00–16:30（建议）",
+          "type": "attraction",
+          "placeId": "duomo-milan",
+          "text": "米兰大教堂：广场外观为核心；如需入内或登顶，应先匹配实际高铁到达时间与官方开放时段，再选择门票。尚未预订。"
+        },
+        {
+          "id": "milan-galleria-14",
+          "time": "16:30–17:30（建议）",
+          "type": "walk",
+          "placeId": "galleria",
+          "text": "米兰大教堂 → 埃马努埃莱二世长廊，逛拱廊、喝咖啡及晚餐，返回米兰酒店休息，准备次日航班。"
+        }
+      ],
+      "photos": [],
+      "routeStops": [
+        {
+          "id": "termini",
+          "name": "罗马Termini车站"
+        },
+        {
+          "id": "milano-centrale",
+          "name": "米兰中央车站"
+        },
+        {
+          "id": "duomo-milan",
+          "name": "米兰大教堂"
+        },
+        {
+          "id": "galleria",
+          "name": "埃马努埃莱二世长廊"
+        }
+      ],
+      "googleRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=41.9005%2C12.4936&destination=45.4658%2C9.19&waypoints=41.901%2C12.501%7C45.485%2C9.204%7C45.4838%2C9.2036%7C45.4642%2C9.1916&travelmode=transit",
+      "railPlanning": [
+        {
+          "day": 7,
+          "title": "高铁｜罗马 → 米兰",
+          "station": "Roma Termini（罗马特米尼车站） → Milano Centrale（米兰中央车站）",
+          "time": "建议09:00–10:00从罗马出发，目标13:00–14:00抵达米兰",
+          "duration": "规划预留约3–3.5小时，按停站变化",
+          "service": "优先直达 Frecciarossa 或 Italo；车次号待确认",
+          "note": "为下午米兰大教堂和长廊留出余量；当日上午不再安排罗马景点，实际直达车次与门票衔接待确认。",
+          "links": [
+            {
+              "label": "Trenitalia官方检索",
+              "url": "https://www.trenitalia.com/en.html"
+            },
+            {
+              "label": "Italo官方检索",
+              "url": "https://www.italotreno.com/en/"
+            }
+          ],
+          "status": "均为规划、未预订。未实时核实2027指定日期的班次和库存；车次号、准确到发时间、票价、退改规则以官方检索结果为准。"
+        }
+      ],
+      "overnightCity": "米兰",
+      "bookingPlanning": [
+        {
+          "title": "米兰大教堂预约｜2月14日下午",
+          "details": [
+            "广场外观保留；内部／屋顶为可选，先确认高铁，再定预约时段。",
+            "2月14日为周日，礼仪、参观及屋顶时段分别核对，不把晚间外观等同于能入内。"
+          ],
+          "links": [
+            {
+              "label": "大教堂官方网站",
+              "url": "https://www.duomomilano.it/en/"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "day": 8,
+      "date": "2027-02-15",
+      "title": "米兰返程 ｜ 宿：飞机上",
+      "locations": [
+        "米兰住宿待选",
+        "米兰马尔彭萨机场"
+      ],
+      "schedule": [
+        {
+          "id": "s8",
+          "time": "",
+          "type": "flight",
+          "text": "建议06:30–07:00离开酒店，按实际机场列车时刻出发，目标09:00前到MXP T1。12:00 CA446起飞，前往成都天府。此日不安排景点。（除截图航班外均为建议安排，交通、酒店及门票待确认。）"
+        }
+      ],
+      "photos": [],
+      "routeStops": [
+        {
+          "id": "milano-centrale",
+          "name": "米兰中央车站"
+        },
+        {
+          "id": "mxp",
+          "name": "米兰马尔彭萨机场"
+        }
+      ],
+      "googleRouteUrl": "https://www.google.com/maps/dir/?api=1&origin=45.4838%2C9.2036&destination=45.63%2C8.72&waypoints=&travelmode=transit",
+      "railPlanning": [
+        {
+          "day": 8,
+          "title": "机场列车｜米兰返程",
+          "station": "Milano Centrale（米兰中央车站） → Malpensa Aeroporto T1（马尔彭萨机场T1）",
+          "time": "建议出发窗口：07:00–08:00；目标09:00前抵达T1",
+          "duration": "当前官方参考约51分钟，2027时刻待核实",
+          "service": "Malpensa Express／RE51方向；具体列车号待确认",
+          "note": "12:00国际航班；前晚复核列车、机场值机截止时间及可能的施工信息。不要选T2作为下车站。",
+          "links": [
+            {
+              "label": "机场列车官方时刻与购票",
+              "url": "https://www.malpensaexpress.it/en/lines-and-timetable/how-to-reach-malpensa/reaching-terminal-1/"
+            }
+          ],
+          "status": "均为规划、未预订。未实时核实2027指定日期的班次和库存；车次号、准确到发时间、票价、退改规则以官方检索结果为准。"
+        }
+      ],
+      "overnightCity": "飞机上"
+    },
+    {
+      "day": 9,
+      "date": "2027-02-16",
+      "title": "抵达成都 ｜ 宿：成都（返家）",
+      "locations": [],
+      "schedule": [
+        {
+          "id": "s9",
+          "time": "",
+          "type": "flight",
+          "text": "05:40抵达成都天府T1，结束旅行。（除截图航班外均为建议安排，交通、酒店及门票待确认。）"
+        }
+      ],
+      "photos": [],
+      "railPlanning": [],
+      "overnightCity": "成都（返家）",
+      "routeStops": []
+    }
+  ],
+  "places": [
+    {
+      "id": "mxp",
+      "name": "米兰马尔彭萨机场",
+      "lat": 45.63,
+      "lng": 8.72,
+      "photo": {
+        "image": "assets/trip-photos/mxp.jpg",
+        "source": "https://www.cestee.de/flughafen/mailand-malpensa-mxp/terminal",
+        "caption": "米兰马尔彭萨机场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "milan",
+      "name": "米兰",
+      "lat": 45.464,
+      "lng": 9.19,
+      "photo": {
+        "image": "assets/trip-photos/duomo-milan.jpg",
+        "source": "https://www.expedia.it/stories/i-30-monumenti-di-milano-piu-importanti/",
+        "caption": "米兰 · 地点参考照片"
+      }
+    },
+    {
+      "id": "florence",
+      "name": "佛罗伦萨",
+      "lat": 43.77,
+      "lng": 11.255,
+      "photo": {
+        "image": "assets/trip-photos/duomo-florence.jpg",
+        "source": "https://www.arte.it/guida-arte/firenze/da-vedere/chiesa/cattedrale-di-santa-maria-del-fiore-1856",
+        "caption": "佛罗伦萨 · 地点参考照片"
+      }
+    },
+    {
+      "id": "rome",
+      "name": "罗马",
+      "lat": 41.903,
+      "lng": 12.496,
+      "photo": {
+        "image": "assets/trip-photos/colosseum.jpg",
+        "source": "https://extraguide.ru/italy/rome/sights/",
+        "caption": "罗马 · 地点参考照片"
+      }
+    },
+    {
+      "id": "milano-centrale",
+      "name": "米兰中央车站",
+      "cityOrArea": "米兰",
+      "geo": {
+        "lat": 45.485,
+        "lng": 9.204
+      },
+      "photo": {
+        "image": "assets/trip-photos/milano-centrale.jpg",
+        "source": "https://distribuzionemoderna.info/finanza/dws-e-omers-si-comprano-grandi-stazioni-retail-deal-miliardario",
+        "caption": "米兰中央车站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "duomo-milan",
+      "name": "米兰大教堂",
+      "cityOrArea": "米兰",
+      "geo": {
+        "lat": 45.4642,
+        "lng": 9.1916
+      },
+      "photo": {
+        "image": "assets/trip-photos/duomo-milan.jpg",
+        "source": "https://www.expedia.it/stories/i-30-monumenti-di-milano-piu-importanti/",
+        "caption": "米兰大教堂 · 地点参考照片"
+      }
+    },
+    {
+      "id": "galleria",
+      "name": "埃马努埃莱二世长廊",
+      "cityOrArea": "米兰",
+      "geo": {
+        "lat": 45.4658,
+        "lng": 9.19
+      },
+      "photo": {
+        "image": "assets/trip-photos/galleria.jpg",
+        "source": "https://www.tickets-milan.com/leonardo3-museum/",
+        "caption": "埃马努埃莱二世长廊 · 地点参考照片"
+      }
+    },
+    {
+      "id": "smn",
+      "name": "佛罗伦萨SMN车站",
+      "cityOrArea": "佛罗伦萨",
+      "geo": {
+        "lat": 43.7765,
+        "lng": 11.248
+      },
+      "photo": {
+        "image": "assets/trip-photos/smn.jpg",
+        "source": "https://www.visittuscany.com/en/attractions/santa-maria-novella-railway-station/",
+        "caption": "佛罗伦萨SMN车站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "duomo-florence",
+      "name": "圣母百花大教堂",
+      "cityOrArea": "佛罗伦萨",
+      "geo": {
+        "lat": 43.7731,
+        "lng": 11.256
+      },
+      "photo": {
+        "image": "assets/trip-photos/duomo-florence.jpg",
+        "source": "https://www.arte.it/guida-arte/firenze/da-vedere/chiesa/cattedrale-di-santa-maria-del-fiore-1856",
+        "caption": "圣母百花大教堂 · 地点参考照片"
+      }
+    },
+    {
+      "id": "signoria",
+      "name": "领主广场",
+      "cityOrArea": "佛罗伦萨",
+      "geo": {
+        "lat": 43.7696,
+        "lng": 11.2558
+      },
+      "photo": {
+        "image": "assets/trip-photos/signoria.jpg",
+        "source": "https://www.dlt.travel/it/magazin/die-10-schoensten-plaetze-italiens",
+        "caption": "领主广场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "ponte",
+      "name": "老桥",
+      "cityOrArea": "佛罗伦萨",
+      "geo": {
+        "lat": 43.768,
+        "lng": 11.2532
+      },
+      "photo": {
+        "image": "assets/trip-photos/ponte.jpg",
+        "source": "https://mywowo.net/zh/意大利/佛罗伦萨/老桥",
+        "caption": "老桥 · 地点参考照片"
+      }
+    },
+    {
+      "id": "michelangelo",
+      "name": "米开朗琪罗广场（选做）",
+      "cityOrArea": "佛罗伦萨",
+      "geo": {
+        "lat": 43.7629,
+        "lng": 11.2651
+      },
+      "photo": {
+        "image": "assets/trip-photos/michelangelo.jpg",
+        "source": "https://www.myflorencepass.com/piazzale-michelangelo",
+        "caption": "米开朗琪罗广场（选做） · 地点参考照片"
+      }
+    },
+    {
+      "id": "uffizi",
+      "name": "乌菲兹美术馆",
+      "cityOrArea": "佛罗伦萨",
+      "geo": {
+        "lat": 43.7678,
+        "lng": 11.2553
+      },
+      "photo": {
+        "image": "assets/trip-photos/uffizi.jpg",
+        "source": "https://www.fhhotelgroup.it/cosa-visitare-firenze",
+        "caption": "乌菲兹美术馆 · 地点参考照片"
+      }
+    },
+    {
+      "id": "market",
+      "name": "佛罗伦萨中央市场",
+      "cityOrArea": "佛罗伦萨",
+      "geo": {
+        "lat": 43.7763,
+        "lng": 11.2532
+      },
+      "photo": {
+        "image": "assets/trip-photos/market.jpg",
+        "source": "https://www.zanussiprofessional.it/references/mercato-centrale-di-firenze/",
+        "caption": "佛罗伦萨中央市场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "sanlorenzo",
+      "name": "圣洛伦佐街区",
+      "cityOrArea": "佛罗伦萨",
+      "geo": {
+        "lat": 43.7749,
+        "lng": 11.2539
+      },
+      "photo": {
+        "image": "assets/trip-photos/sanlorenzo.jpg",
+        "source": "https://www.walksofart.org/florence/a-history-of-florence/san-lorenzo-and-medici-chapels",
+        "caption": "圣洛伦佐街区 · 地点参考照片"
+      }
+    },
+    {
+      "id": "termini",
+      "name": "罗马Termini车站",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.901,
+        "lng": 12.501
+      },
+      "photo": {
+        "image": "assets/trip-photos/termini.jpg",
+        "source": "https://imaginoso.de/italien/rom/bahnhof-roma-termini-westansicht",
+        "caption": "罗马Termini车站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "pantheon",
+      "name": "万神殿",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.8986,
+        "lng": 12.4769
+      },
+      "photo": {
+        "image": "assets/trip-photos/pantheon.jpg",
+        "source": "https://sundaytour.com.tw/zh-tw/attractions/detail.php?pid=6636",
+        "caption": "万神殿 · 地点参考照片"
+      }
+    },
+    {
+      "id": "navona",
+      "name": "纳沃纳广场",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.8992,
+        "lng": 12.4731
+      },
+      "photo": {
+        "image": "assets/trip-photos/navona.jpg",
+        "source": "https://www.sundaytour.com.tw/zh-tw/attractions/detail.php?pid=5405",
+        "caption": "纳沃纳广场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "trevi",
+      "name": "特雷维喷泉",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.9009,
+        "lng": 12.4833
+      },
+      "photo": {
+        "image": "assets/trip-photos/trevi.jpg",
+        "source": "https://tours.escapes.ca/trip/barcelona-to-rome-3238",
+        "caption": "特雷维喷泉 · 地点参考照片"
+      }
+    },
+    {
+      "id": "colosseum",
+      "name": "斗兽场",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.8902,
+        "lng": 12.4922
+      },
+      "photo": {
+        "image": "assets/trip-photos/colosseum.jpg",
+        "source": "https://extraguide.ru/italy/rome/sights/",
+        "caption": "斗兽场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "forum",
+      "name": "古罗马广场",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.8925,
+        "lng": 12.4853
+      },
+      "photo": {
+        "image": "assets/trip-photos/forum.jpg",
+        "source": "https://www.moja-travel.net/reise/venedig-florenz-und-rom",
+        "caption": "古罗马广场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "capitol",
+      "name": "卡比托利欧广场",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.8933,
+        "lng": 12.4828
+      },
+      "photo": {
+        "image": "assets/trip-photos/capitol.jpg",
+        "source": "https://www.comune.roma.it/web/it/notizia/avviata-procedura-liquidazione-ipa.page",
+        "caption": "卡比托利欧广场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "venezia",
+      "name": "威尼斯广场",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.8958,
+        "lng": 12.4823
+      },
+      "photo": {
+        "image": "assets/trip-photos/venezia.jpg",
+        "source": "https://www.enroma.com/que-ver-en-roma/",
+        "caption": "威尼斯广场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "spagna",
+      "name": "西班牙广场",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.906,
+        "lng": 12.4828
+      },
+      "photo": {
+        "image": "assets/trip-photos/spagna.jpg",
+        "source": "https://www.visitlazio.com/conosci-piazza-di-spagna-a-roma/",
+        "caption": "西班牙广场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "borghese",
+      "name": "博尔盖塞公园",
+      "cityOrArea": "罗马",
+      "geo": {
+        "lat": 41.9122,
+        "lng": 12.4852
+      },
+      "photo": {
+        "image": "assets/trip-photos/borghese.jpg",
+        "source": "https://www.lyonaeroports.com/en/inspiration/weekend-rome-visits-and-activities",
+        "caption": "博尔盖塞公园 · 地点参考照片"
+      }
+    },
+    {
+      "id": "vatican-museums",
+      "name": "梵蒂冈博物馆",
+      "geo": {
+        "lat": 41.9065,
+        "lng": 12.4536
+      },
+      "countryCode": "VA",
+      "mapRegionId": "vatican",
+      "cityOrArea": "梵蒂冈",
+      "photo": {
+        "image": "assets/trip-photos/vatican-museums.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File:Ingresso_ai_Musei_Vaticani,_2004.jpg",
+        "caption": "梵蒂冈博物馆 · 地点参考照片"
+      }
+    },
+    {
+      "id": "sistine",
+      "name": "西斯廷礼拜堂（馆内）",
+      "geo": {
+        "lat": 41.9029,
+        "lng": 12.4545
+      },
+      "countryCode": "VA",
+      "mapRegionId": "vatican",
+      "cityOrArea": "梵蒂冈",
+      "photo": {
+        "image": "assets/trip-photos/sistine.jpg",
+        "source": "https://www.thecollector.com/michelangelo-creation-of-adam-meaning/",
+        "caption": "西斯廷礼拜堂（馆内） · 地点参考照片"
+      }
+    },
+    {
+      "id": "stpeter",
+      "name": "圣彼得大教堂",
+      "geo": {
+        "lat": 41.9022,
+        "lng": 12.4539
+      },
+      "countryCode": "VA",
+      "mapRegionId": "vatican",
+      "cityOrArea": "梵蒂冈",
+      "photo": {
+        "image": "assets/trip-photos/stpeter.jpg",
+        "source": "https://themisanthropesjournal.blogspot.com/2014/05/st-peters-basilica-vatican-city-italy.html",
+        "caption": "圣彼得大教堂 · 地点参考照片"
+      }
+    },
+    {
+      "id": "stpeter-square",
+      "name": "圣彼得广场",
+      "geo": {
+        "lat": 41.9022,
+        "lng": 12.4573
+      },
+      "countryCode": "VA",
+      "mapRegionId": "vatican",
+      "cityOrArea": "梵蒂冈",
+      "photo": {
+        "image": "assets/trip-photos/stpeter-square.jpg",
+        "source": "https://www.velantiavaticano.com/",
+        "caption": "圣彼得广场 · 地点参考照片"
+      }
+    },
+    {
+      "id": "como-station",
+      "name": "Como San Giovanni（科莫圣乔瓦尼车站）车站",
+      "geo": {
+        "lat": 45.8096,
+        "lng": 9.072
+      },
+      "countryCode": "IT",
+      "mapRegionId": "italy",
+      "cityOrArea": "科莫",
+      "photo": {
+        "image": "assets/trip-photos/como-sg.jpg",
+        "source": "https://comozero.it/attualita/lex-parlamentare-stazione-san-giovanni-il-parcheggio-si-paga-solo-in-orari-dufficio/",
+        "caption": "Como San Giovanni（科莫圣乔瓦尼车站）车站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "como-duomo",
+      "name": "科莫大教堂",
+      "geo": {
+        "lat": 45.8118,
+        "lng": 9.0834
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖周边",
+      "photo": {
+        "image": "assets/trip-photos/como-duomo.jpg",
+        "source": "https://www.getoutnabout.com/blog/a-lake-gothic-cathedral-funicular-and-much-more-como",
+        "caption": "科莫大教堂 · 地点参考照片"
+      }
+    },
+    {
+      "id": "como-lake",
+      "name": "科莫湖 · 科莫镇湖滨",
+      "geo": {
+        "lat": 45.814,
+        "lng": 9.079
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖周边",
+      "photo": {
+        "image": "assets/trip-photos/como-lake.jpg",
+        "source": "https://www.nordicvisitor.com/alps/attractions/italy/lake-como/",
+        "caption": "科莫湖 · 科莫镇湖滨 · 地点参考照片"
+      }
+    },
+    {
+      "id": "saronno",
+      "name": "Saronno（萨龙诺）换乘站",
+      "geo": {
+        "lat": 45.626,
+        "lng": 9.031
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖周边",
+      "photo": {
+        "image": "assets/trip-photos/saronno.jpg",
+        "source": "https://www.varesenews.it/2021/08/aggredita-e-malmenata-in-centro-a-saronno/1368219/",
+        "caption": "Saronno（萨龙诺）换乘站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "como-lago",
+      "name": "Como Lago（科莫湖车站）车站",
+      "geo": {
+        "lat": 45.8155,
+        "lng": 9.083
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖周边",
+      "photo": {
+        "image": "assets/trip-photos/como-lago.jpg",
+        "source": "https://timelesstravelsteps.com/how-to-travel-around-lake-como-italy/",
+        "caption": "Como Lago（科莫湖车站）车站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "cadorna",
+      "name": "米兰Cadorna车站",
+      "geo": {
+        "lat": 45.468,
+        "lng": 9.176
+      },
+      "countryCode": "IT",
+      "cityOrArea": "米兰",
+      "photo": {
+        "image": "assets/trip-photos/cadorna.jpg",
+        "source": "https://sublimista.it/gae-aulenti-dalla-polvere-dei-cantieri-alle-cene-con-gli-artisti/",
+        "caption": "米兰Cadorna车站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "como-sg",
+      "name": "Como S. Giovanni（科莫圣乔瓦尼车站）车站",
+      "geo": {
+        "lat": 45.8097,
+        "lng": 9.0724
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖",
+      "photo": {
+        "image": "assets/trip-photos/como-sg.jpg",
+        "source": "https://comozero.it/attualita/lex-parlamentare-stazione-san-giovanni-il-parcheggio-si-paga-solo-in-orari-dufficio/",
+        "caption": "Como S. Giovanni（科莫圣乔瓦尼车站）车站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "como-pier",
+      "name": "Como（科莫）游船码头",
+      "geo": {
+        "lat": 45.814,
+        "lng": 9.08
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖",
+      "photo": {
+        "image": "assets/trip-photos/como-pier.jpg",
+        "source": "https://pbase.com/bmcmorrow/lagodicomo",
+        "caption": "Como（科莫）游船码头 · 地点参考照片"
+      }
+    },
+    {
+      "id": "bellagio",
+      "name": "Bellagio（贝拉焦）",
+      "geo": {
+        "lat": 45.987,
+        "lng": 9.261
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖",
+      "photo": {
+        "image": "assets/trip-photos/bellagio.jpg",
+        "source": "https://www.fashion.at/mobility/2026/tui-musement-day-trips-europe-ranking-vienna-wachau-milano-como26-5-2026.htm",
+        "caption": "Bellagio（贝拉焦） · 地点参考照片"
+      }
+    },
+    {
+      "id": "varenna",
+      "name": "Varenna（瓦伦纳）",
+      "geo": {
+        "lat": 46.011,
+        "lng": 9.284
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖",
+      "photo": {
+        "image": "assets/trip-photos/varenna.jpg",
+        "source": "https://www.in-lombardia.it/en/tourism-in-lombardy/tourism-lecco/infopoint-varenna",
+        "caption": "Varenna（瓦伦纳） · 地点参考照片"
+      }
+    },
+    {
+      "id": "varenna-esino",
+      "name": "Varenna-Esino（瓦伦纳埃西诺车站）车站",
+      "geo": {
+        "lat": 46.017,
+        "lng": 9.284
+      },
+      "countryCode": "IT",
+      "cityOrArea": "科莫湖",
+      "photo": {
+        "image": "assets/trip-photos/varenna-esino.jpg",
+        "source": "https://commons.wikimedia.org/wiki/File%3AVarenna_train_station_-_panoramio.jpg",
+        "caption": "Varenna-Esino（瓦伦纳埃西诺车站）车站 · 地点参考照片"
+      }
+    },
+    {
+      "id": "total-milan",
+      "name": "米兰",
+      "photo": {
+        "image": "assets/trip-photos/duomo-milan.jpg",
+        "source": "https://www.expedia.it/stories/i-30-monumenti-di-milano-piu-importanti/",
+        "caption": "米兰 · 地点参考照片"
+      }
+    },
+    {
+      "id": "total-florence",
+      "name": "佛罗伦萨",
+      "photo": {
+        "image": "assets/trip-photos/duomo-florence.jpg",
+        "source": "https://www.arte.it/guida-arte/firenze/da-vedere/chiesa/cattedrale-di-santa-maria-del-fiore-1856",
+        "caption": "佛罗伦萨 · 地点参考照片"
+      }
+    },
+    {
+      "id": "total-rome",
+      "name": "罗马",
+      "photo": {
+        "image": "assets/trip-photos/colosseum.jpg",
+        "source": "https://extraguide.ru/italy/rome/sights/",
+        "caption": "罗马 · 地点参考照片"
+      }
+    },
+    {
+      "id": "total-vatican",
+      "name": "梵蒂冈",
+      "photo": {
+        "image": "assets/trip-photos/stpeter.jpg",
+        "source": "https://themisanthropesjournal.blogspot.com/2014/05/st-peters-basilica-vatican-city-italy.html",
+        "caption": "梵蒂冈 · 地点参考照片"
+      }
+    },
+    {
+      "id": "total-como",
+      "name": "科莫湖（科莫镇）",
+      "photo": {
+        "image": "assets/trip-photos/como-lake.jpg",
+        "source": "https://www.nordicvisitor.com/alps/attractions/italy/lake-como/",
+        "caption": "科莫湖（科莫镇） · 地点参考照片"
+      }
+    }
+  ],
+  "restaurants": [],
+  "bookingsAndTickets": [],
+  "ticketPlanning": {
+    "statusStorage": "local",
+    "statusStorageNote": "门票状态默认只保存在当前浏览器。",
+    "items": [
+      {
+        "id": "ticket-uffizi",
+        "day": 4,
+        "name": "乌菲兹美术馆｜建议09:00，未预订",
+        "requirement": "advance-recommended",
+        "purchaseStatus": "not-purchased",
+        "guidance": [
+          "建议预约2027年2月11日09:00左右入场，预留约3小时；此为建议时段，未锁定库存。",
+          "当前官网常规开放：周二至周日08:15–18:30，周一闭馆；2027临时调整需复核。",
+          "当前普通提前购票参考29欧／人，两人58欧；2027票价与优惠资格以结算页为准。",
+          "从乌菲兹官网进入tickets.uffizi.it，选择日期、时段和两位参观者；按证件准确填写姓名。",
+          "当前官方使用实名票，入场证件须与票面姓名一致。建议提前20–30分钟到场作为行程缓冲。",
+          "2027年2月的开放购票日期与具体库存尚未核实；不能把无搜索结果当作售罄。",
+          "本计划仅安排乌菲兹本馆，未含瓦萨里走廊。"
+        ],
+        "officialUrl": "https://tickets.uffizi.it/",
+        "scheduleItemIds": [
+          "uffizi-visit"
+        ]
+      },
+      {
+        "id": "ticket-vatican",
+        "day": 6,
+        "name": "梵蒂冈博物馆与西斯廷礼拜堂｜未预订",
+        "requirement": "advance-recommended",
+        "guidance": [
+          "计划2027年2月13日09:00左右入场，尚未预订，日期库存及价格待官方确认。",
+          "唯一官方在线购票入口：tickets.museivaticani.va；从官网进入选择博物馆与西斯廷礼拜堂参观产品、2位参观者及时间。",
+          "当前官网常规周一至周六开放，2027闭馆日历已提供，临时宗教活动与关闭仍需出发前复核。",
+          "不硬写“提前60天必放票”；放票窗口与实际库存尚未核实。",
+          "西斯廷礼拜堂不另安排一张独立门票；按所选博物馆产品包含范围核对。",
+          "着装覆盖肩膀和膝盖，参观规则以官网为准。"
+        ],
+        "officialUrl": "https://tickets.museivaticani.va/",
+        "scheduleItemIds": [
+          "vatican-visit"
+        ]
+      },
+      {
+        "id": "ticket-stpeter",
+        "day": 6,
+        "name": "圣彼得大教堂｜进入方式与礼仪时间待复核",
+        "requirement": "needs-confirmation",
+        "guidance": [
+          "与博物馆分开进入和安检；博物馆预约不代表教堂免排队。",
+          "如选官方预约、讲解或穹顶产品，核对各自费用与时段；本计划不含穹顶。",
+          "遇弥撒、礼仪或安检排队，优先保留大教堂与广场，取消其他加项。"
+        ],
+        "officialUrl": "https://www.basilicasanpietro.va/en/opening-hours",
+        "scheduleItemIds": [
+          "stpeter-visit"
+        ]
+      }
+    ]
+  },
+  "preTrip": {
+    "packingItems": [
+      {
+        "id": "todo-lake-train",
+        "text": "科莫湖出游火车票建议提前一天购买：米兰→Como S. Giovanni（科莫圣乔瓦尼车站）、Varenna-Esino（瓦伦纳埃西诺车站）→米兰分开购票。",
+        "completed": false
+      },
+      {
+        "id": "todo-lake-boat",
+        "text": "科莫湖船票考虑当天现场购买，出发前先核实冬季船班、快船购票规则与返程接续。",
+        "completed": false
+      }
+    ],
+    "preparationsExplicitlyMentioned": [],
+    "missingNote": ""
+  },
+  "mapLinks": {
+    "providedGoogleMapsLinks": [],
+    "note": "",
+    "cityLevelNavigationDisabled": false,
+    "navigationPolicy": {
+      "noNavigationTypes": [
+        "flight",
+        "note",
+        "rest"
+      ],
+      "selfNavigationTypes": [
+        "drive",
+        "return",
+        "transfer",
+        "check-in",
+        "check-out",
+        "restaurant",
+        "attraction",
+        "walk",
+        "hike"
+      ]
+    },
+    "navigationPlaces": []
+  },
+  "issuesAndUncertainties": [],
+  "map": {
+    "schemaVersion": "1.0-lite",
+    "mapMode": "template-auto",
+    "templateId": "auto",
+    "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+    "places": [
+      {
+        "id": "mxp",
+        "name": "米兰马尔彭萨机场",
+        "lat": 45.63,
+        "lng": 8.72,
+        "countryCode": "IT",
+        "geo": {
+          "lat": 45.63,
+          "lng": 8.72
+        }
+      },
+      {
+        "id": "milan",
+        "name": "米兰",
+        "lat": 45.464,
+        "lng": 9.19,
+        "countryCode": "IT",
+        "geo": {
+          "lat": 45.464,
+          "lng": 9.19
+        }
+      },
+      {
+        "id": "florence",
+        "name": "佛罗伦萨",
+        "lat": 43.77,
+        "lng": 11.255,
+        "countryCode": "IT",
+        "geo": {
+          "lat": 43.77,
+          "lng": 11.255
+        }
+      },
+      {
+        "id": "rome",
+        "name": "罗马",
+        "lat": 41.903,
+        "lng": 12.496,
+        "countryCode": "IT",
+        "geo": {
+          "lat": 41.903,
+          "lng": 12.496
+        }
+      },
+      {
+        "id": "milano-centrale",
+        "name": "米兰中央车站",
+        "geo": {
+          "lat": 45.485,
+          "lng": 9.204
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "duomo-milan",
+        "name": "米兰大教堂",
+        "geo": {
+          "lat": 45.4642,
+          "lng": 9.1916
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "galleria",
+        "name": "埃马努埃莱二世长廊",
+        "geo": {
+          "lat": 45.4658,
+          "lng": 9.19
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "smn",
+        "name": "佛罗伦萨SMN车站",
+        "geo": {
+          "lat": 43.7765,
+          "lng": 11.248
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "duomo-florence",
+        "name": "圣母百花大教堂",
+        "geo": {
+          "lat": 43.7731,
+          "lng": 11.256
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "signoria",
+        "name": "领主广场",
+        "geo": {
+          "lat": 43.7696,
+          "lng": 11.2558
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "ponte",
+        "name": "老桥",
+        "geo": {
+          "lat": 43.768,
+          "lng": 11.2532
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "michelangelo",
+        "name": "米开朗琪罗广场（选做）",
+        "geo": {
+          "lat": 43.7629,
+          "lng": 11.2651
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "uffizi",
+        "name": "乌菲兹美术馆",
+        "geo": {
+          "lat": 43.7678,
+          "lng": 11.2553
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "market",
+        "name": "佛罗伦萨中央市场",
+        "geo": {
+          "lat": 43.7763,
+          "lng": 11.2532
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "sanlorenzo",
+        "name": "圣洛伦佐街区",
+        "geo": {
+          "lat": 43.7749,
+          "lng": 11.2539
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "termini",
+        "name": "罗马Termini车站",
+        "geo": {
+          "lat": 41.901,
+          "lng": 12.501
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "pantheon",
+        "name": "万神殿",
+        "geo": {
+          "lat": 41.8986,
+          "lng": 12.4769
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "navona",
+        "name": "纳沃纳广场",
+        "geo": {
+          "lat": 41.8992,
+          "lng": 12.4731
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "trevi",
+        "name": "特雷维喷泉",
+        "geo": {
+          "lat": 41.9009,
+          "lng": 12.4833
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "colosseum",
+        "name": "斗兽场",
+        "geo": {
+          "lat": 41.8902,
+          "lng": 12.4922
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "forum",
+        "name": "古罗马广场",
+        "geo": {
+          "lat": 41.8925,
+          "lng": 12.4853
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "capitol",
+        "name": "卡比托利欧广场",
+        "geo": {
+          "lat": 41.8933,
+          "lng": 12.4828
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "venezia",
+        "name": "威尼斯广场",
+        "geo": {
+          "lat": 41.8958,
+          "lng": 12.4823
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "spagna",
+        "name": "西班牙广场",
+        "geo": {
+          "lat": 41.906,
+          "lng": 12.4828
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "borghese",
+        "name": "博尔盖塞公园",
+        "geo": {
+          "lat": 41.9122,
+          "lng": 12.4852
+        },
+        "countryCode": "IT",
+        "overview": false
+      },
+      {
+        "id": "vatican-museums",
+        "name": "梵蒂冈博物馆",
+        "geo": {
+          "lat": 41.9065,
+          "lng": 12.4536
+        },
+        "countryCode": "VA",
+        "mapRegionId": "vatican"
+      },
+      {
+        "id": "sistine",
+        "name": "西斯廷礼拜堂（馆内）",
+        "geo": {
+          "lat": 41.9029,
+          "lng": 12.4545
+        },
+        "countryCode": "VA",
+        "mapRegionId": "vatican"
+      },
+      {
+        "id": "stpeter",
+        "name": "圣彼得大教堂",
+        "geo": {
+          "lat": 41.9022,
+          "lng": 12.4539
+        },
+        "countryCode": "VA",
+        "mapRegionId": "vatican"
+      },
+      {
+        "id": "stpeter-square",
+        "name": "圣彼得广场",
+        "geo": {
+          "lat": 41.9022,
+          "lng": 12.4573
+        },
+        "countryCode": "VA",
+        "mapRegionId": "vatican"
+      },
+      {
+        "id": "total-milan",
+        "name": "米兰",
+        "geo": {
+          "lat": 45.464,
+          "lng": 9.19
+        },
+        "countryCode": "IT",
+        "mapRegionId": "whole-trip",
+        "overview": true
+      },
+      {
+        "id": "total-florence",
+        "name": "佛罗伦萨",
+        "geo": {
+          "lat": 43.77,
+          "lng": 11.255
+        },
+        "countryCode": "IT",
+        "mapRegionId": "whole-trip",
+        "overview": true
+      },
+      {
+        "id": "total-rome",
+        "name": "罗马",
+        "geo": {
+          "lat": 41.903,
+          "lng": 12.496
+        },
+        "countryCode": "IT",
+        "mapRegionId": "whole-trip",
+        "overview": true
+      },
+      {
+        "id": "total-vatican",
+        "name": "梵蒂冈",
+        "geo": {
+          "lat": 41.902,
+          "lng": 12.454
+        },
+        "countryCode": "VA",
+        "mapRegionId": "whole-trip",
+        "overview": true
+      },
+      {
+        "id": "como-station",
+        "name": "Como San Giovanni（科莫圣乔瓦尼车站）车站",
+        "geo": {
+          "lat": 45.8096,
+          "lng": 9.072
+        },
+        "countryCode": "IT",
+        "mapRegionId": "italy"
+      },
+      {
+        "id": "como-duomo",
+        "name": "科莫大教堂",
+        "geo": {
+          "lat": 45.8118,
+          "lng": 9.0834
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "como-lake",
+        "name": "科莫湖 · 科莫镇湖滨",
+        "geo": {
+          "lat": 45.814,
+          "lng": 9.079
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "total-como",
+        "name": "科莫湖（科莫镇）",
+        "geo": {
+          "lat": 45.814,
+          "lng": 9.079
+        },
+        "countryCode": "IT",
+        "mapRegionId": "whole-trip",
+        "overview": true
+      },
+      {
+        "id": "saronno",
+        "name": "Saronno（萨龙诺）换乘站",
+        "geo": {
+          "lat": 45.626,
+          "lng": 9.031
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "como-lago",
+        "name": "Como Lago（科莫湖车站）车站",
+        "geo": {
+          "lat": 45.8155,
+          "lng": 9.083
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "cadorna",
+        "name": "米兰Cadorna车站",
+        "geo": {
+          "lat": 45.468,
+          "lng": 9.176
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "como-sg",
+        "name": "Como S. Giovanni（科莫圣乔瓦尼车站）车站",
+        "geo": {
+          "lat": 45.8097,
+          "lng": 9.0724
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "como-pier",
+        "name": "Como（科莫）游船码头",
+        "geo": {
+          "lat": 45.814,
+          "lng": 9.08
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "bellagio",
+        "name": "Bellagio（贝拉焦）",
+        "geo": {
+          "lat": 45.987,
+          "lng": 9.261
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "varenna",
+        "name": "Varenna（瓦伦纳）",
+        "geo": {
+          "lat": 46.011,
+          "lng": 9.284
+        },
+        "countryCode": "IT"
+      },
+      {
+        "id": "varenna-esino",
+        "name": "Varenna-Esino（瓦伦纳埃西诺车站）车站",
+        "geo": {
+          "lat": 46.017,
+          "lng": 9.284
+        },
+        "countryCode": "IT"
+      }
+    ],
+    "routes": [
+      {
+        "day": 2,
+        "placeIds": [
+          "mxp",
+          "milano-centrale",
+          "como-sg",
+          "como-lake",
+          "como-pier",
+          "bellagio",
+          "varenna",
+          "varenna-esino",
+          "milano-centrale"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "milano-centrale",
+          "smn",
+          "duomo-florence",
+          "signoria",
+          "ponte",
+          "michelangelo"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "uffizi",
+          "market",
+          "sanlorenzo",
+          "ponte"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "smn",
+          "termini",
+          "colosseum",
+          "forum",
+          "pantheon"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "vatican-museums",
+          "sistine",
+          "stpeter",
+          "stpeter-square"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "termini",
+          "milano-centrale",
+          "duomo-milan",
+          "galleria"
+        ]
+      },
+      {
+        "id": "total-firenze",
+        "day": 3,
+        "placeIds": [
+          "total-milan",
+          "total-florence"
+        ]
+      },
+      {
+        "id": "total-rome-leg",
+        "day": 5,
+        "placeIds": [
+          "total-florence",
+          "total-rome"
+        ]
+      },
+      {
+        "id": "total-vatican-leg",
+        "day": 6,
+        "placeIds": [
+          "total-rome",
+          "total-vatican"
+        ]
+      },
+      {
+        "id": "total-return",
+        "day": 7,
+        "placeIds": [
+          "total-vatican",
+          "total-rome",
+          "total-milan"
+        ]
+      },
+      {
+        "id": "total-como-loop",
+        "day": 2,
+        "placeIds": [
+          "total-milan",
+          "total-como",
+          "total-milan"
+        ]
+      },
+      {
+        "id": "total-como-day",
+        "day": 2,
+        "placeIds": [
+          "total-milan",
+          "total-como",
+          "total-milan"
+        ]
+      },
+      {
+        "day": 8,
+        "placeIds": [
+          "milano-centrale",
+          "mxp"
+        ]
+      }
+    ],
+    "dailyRoutes": [
+      {
+        "day": 2,
+        "placeIds": [
+          "mxp",
+          "milano-centrale",
+          "como-sg",
+          "como-lake",
+          "como-pier",
+          "bellagio",
+          "varenna",
+          "varenna-esino",
+          "milano-centrale"
+        ]
+      },
+      {
+        "day": 3,
+        "placeIds": [
+          "milano-centrale",
+          "smn",
+          "duomo-florence",
+          "signoria",
+          "ponte",
+          "michelangelo"
+        ]
+      },
+      {
+        "day": 4,
+        "placeIds": [
+          "uffizi",
+          "market",
+          "sanlorenzo",
+          "ponte"
+        ]
+      },
+      {
+        "day": 5,
+        "placeIds": [
+          "smn",
+          "termini",
+          "colosseum",
+          "forum",
+          "pantheon"
+        ]
+      },
+      {
+        "day": 6,
+        "placeIds": [
+          "vatican-museums",
+          "sistine",
+          "stpeter",
+          "stpeter-square"
+        ]
+      },
+      {
+        "day": 7,
+        "placeIds": [
+          "termini",
+          "milano-centrale",
+          "duomo-milan",
+          "galleria"
+        ]
+      },
+      {
+        "id": "total-firenze",
+        "day": 3,
+        "placeIds": [
+          "total-milan",
+          "total-florence"
+        ]
+      },
+      {
+        "id": "total-rome-leg",
+        "day": 5,
+        "placeIds": [
+          "total-florence",
+          "total-rome"
+        ]
+      },
+      {
+        "id": "total-vatican-leg",
+        "day": 6,
+        "placeIds": [
+          "total-rome",
+          "total-vatican"
+        ]
+      },
+      {
+        "id": "total-return",
+        "day": 7,
+        "placeIds": [
+          "total-vatican",
+          "total-rome",
+          "total-milan"
+        ]
+      },
+      {
+        "id": "total-como-loop",
+        "day": 2,
+        "placeIds": [
+          "total-milan",
+          "total-como",
+          "total-milan"
+        ]
+      },
+      {
+        "id": "total-como-day",
+        "day": 2,
+        "placeIds": [
+          "total-milan",
+          "total-como",
+          "total-milan"
+        ]
+      },
+      {
+        "day": 8,
+        "placeIds": [
+          "milano-centrale",
+          "mxp"
+        ]
+      }
+    ],
+    "region": {
+      "id": "italy",
+      "label": "意大利",
+      "countryCode": "IT"
+    },
+    "regions": [
+      {
+        "id": "whole-trip",
+        "label": "全程总览",
+        "countryCodes": [],
+        "title": "米兰落地 → 科莫湖 → 米兰 → 佛罗伦萨 → 罗马 → 梵蒂冈 → 米兰",
+        "description": "包含落地当天的科莫湖往返；路线仅示意相对方位与顺序。"
+      },
+      {
+        "id": "italy",
+        "label": "意大利",
+        "countryCode": "IT"
+      },
+      {
+        "id": "vatican",
+        "label": "梵蒂冈",
+        "countryCode": "VA"
+      }
+    ],
+    "defaultRegionId": "whole-trip",
+    "photoPinGap": 132
+  },
+  "routeMap": {
+    "defaultRegionId": "whole-trip",
+    "regions": [
+      {
+        "id": "whole-trip",
+        "label": "全程总览",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "river-highland",
+        "mapModeReason": "separated-clusters-or-long-jump",
+        "mapModeMetrics": {
+          "placeCount": 5,
+          "geoPlaceCount": 5,
+          "widthKm": 273.89,
+          "heightKm": 434.23,
+          "spanKm": 513.87,
+          "averageNearestKm": 63.25,
+          "components": 1,
+          "largestLegKm": 476.83,
+          "jumpRatio": 11.96
+        },
+        "days": [
+          2,
+          3,
+          5,
+          6,
+          7
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-05-river-highland.webp",
+        "title": "米兰落地 → 科莫湖 → 米兰 → 佛罗伦萨 → 罗马 → 梵蒂冈 → 米兰",
+        "ariaLabel": "全程总览模板化旅行路线示意图，共5天",
+        "description": "包含落地当天的科莫湖往返；路线仅示意相对方位与顺序。",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "全程总览",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 3,
+            "color": "#618344",
+            "placeIds": [
+              "total-milan",
+              "total-florence"
+            ],
+            "paths": [
+              "M774.98 316.78 C846.9 378.8 896.3 455.3 920.34 541.82"
+            ],
+            "overviewPaths": [
+              "M774.98 316.78 C846.9 378.8 896.3 455.3 920.34 541.82"
+            ]
+          },
+          {
+            "day": 5,
+            "color": "#8865a5",
+            "placeIds": [
+              "total-florence",
+              "total-rome"
+            ],
+            "paths": [
+              "M920.34 541.82 C1007.1 609.3 1069.6 694.6 1104.29 792.56"
+            ],
+            "overviewPaths": [
+              "M920.34 541.82 C1007.1 609.3 1069.6 694.6 1104.29 792.56"
+            ]
+          },
+          {
+            "day": 6,
+            "color": "#df6185",
+            "placeIds": [
+              "total-rome",
+              "total-vatican"
+            ],
+            "paths": [
+              "M1104.29 792.56 C1059.6 779.5 1015.0 779.5 973.03 792.71"
+            ],
+            "overviewPaths": [
+              "M1104.29 792.56 C1059.6 779.5 1015.0 779.5 973.03 792.71"
+            ]
+          },
+          {
+            "day": 7,
+            "color": "#397dc1",
+            "placeIds": [
+              "total-vatican",
+              "total-rome",
+              "total-milan"
+            ],
+            "paths": [
+              "M973.03 792.71 C1017.6 779.5 1062.3 779.5 1104.29 792.56 C1017.0 613.7 905.0 452.0 774.98 316.78"
+            ],
+            "overviewPaths": [
+              "M973.03 792.71 C1017.6 779.5 1062.3 779.5 1104.29 792.56 C1017.0 613.7 905.0 452.0 774.98 316.78"
+            ]
+          },
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "total-milan",
+              "total-como",
+              "total-milan"
+            ],
+            "paths": [
+              "M774.98 316.78 C739.2 287.1 698.2 269.4 654.39 264.83 C700.6 270.4 741.6 288.1 774.98 316.78"
+            ],
+            "overviewPaths": [
+              "M774.98 316.78 C739.2 287.1 698.2 269.4 654.39 264.83 C700.6 270.4 741.6 288.1 774.98 316.78"
+            ]
+          },
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "total-milan",
+              "total-como",
+              "total-milan"
+            ],
+            "paths": [
+              "M774.98 316.78 C739.2 287.1 698.2 269.4 654.39 264.83 C700.6 270.4 741.6 288.1 774.98 316.78"
+            ],
+            "overviewPaths": [
+              "M774.98 316.78 C739.2 287.1 698.2 269.4 654.39 264.83 C700.6 270.4 741.6 288.1 774.98 316.78"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "total-milan",
+            "x": 774.98,
+            "y": 316.78,
+            "color": "#e77e22",
+            "tx": 806.98,
+            "ty": 284.78,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "米兰"
+            ],
+            "query": "米兰 全程总览",
+            "geo": {
+              "lat": 45.464,
+              "lng": 9.19
+            },
+            "days": [
+              2,
+              3,
+              7
+            ]
+          },
+          {
+            "id": "total-florence",
+            "x": 920.34,
+            "y": 541.82,
+            "color": "#618344",
+            "tx": 888.34,
+            "ty": 509.82,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "佛罗伦萨"
+            ],
+            "query": "佛罗伦萨 全程总览",
+            "geo": {
+              "lat": 43.77,
+              "lng": 11.255
+            },
+            "days": [
+              3,
+              5
+            ]
+          },
+          {
+            "id": "total-rome",
+            "x": 1104.29,
+            "y": 792.56,
+            "color": "#8865a5",
+            "tx": 1182.29,
+            "ty": 730.56,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "罗马"
+            ],
+            "query": "罗马 全程总览",
+            "geo": {
+              "lat": 41.903,
+              "lng": 12.496
+            },
+            "days": [
+              5,
+              6,
+              7
+            ]
+          },
+          {
+            "id": "total-vatican",
+            "x": 973.03,
+            "y": 792.71,
+            "color": "#df6185",
+            "tx": 895.03,
+            "ty": 730.71,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "梵蒂冈"
+            ],
+            "query": "梵蒂冈 全程总览",
+            "geo": {
+              "lat": 41.902,
+              "lng": 12.454
+            },
+            "days": [
+              6,
+              7
+            ]
+          },
+          {
+            "id": "total-como",
+            "x": 654.39,
+            "y": 264.83,
+            "color": "#e77e22",
+            "tx": 792.39,
+            "ty": 176.83,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "科莫湖（科莫镇）"
+            ],
+            "query": "科莫湖（科莫镇） 全程总览",
+            "geo": {
+              "lat": 45.814,
+              "lng": 9.079
+            },
+            "days": [
+              2
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "total-milan",
+          "total-florence",
+          "total-rome",
+          "total-vatican",
+          "total-como"
+        ],
+        "dailyLayouts": {
+          "2": {
+            "places": [
+              "total-milan",
+              "total-como"
+            ],
+            "labels": {
+              "total-milan": {
+                "x": 806.98,
+                "y": 284.78,
+                "anchor": "start"
+              },
+              "total-como": {
+                "x": 792.39,
+                "y": 176.83,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 714.68,
+                "y": 290.8
+              },
+              {
+                "items": [],
+                "x": 714.68,
+                "y": 290.8
+              }
+            ]
+          },
+          "3": {
+            "places": [
+              "total-milan",
+              "total-florence"
+            ],
+            "labels": {
+              "total-milan": {
+                "x": 806.98,
+                "y": 284.78,
+                "anchor": "start"
+              },
+              "total-florence": {
+                "x": 888.34,
+                "y": 509.82,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 847.66,
+                "y": 429.3
+              }
+            ]
+          },
+          "5": {
+            "places": [
+              "total-florence",
+              "total-rome"
+            ],
+            "labels": {
+              "total-florence": {
+                "x": 888.34,
+                "y": 509.82,
+                "anchor": "end"
+              },
+              "total-rome": {
+                "x": 1182.29,
+                "y": 730.56,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1012.32,
+                "y": 667.19
+              }
+            ]
+          },
+          "6": {
+            "places": [
+              "total-rome",
+              "total-vatican"
+            ],
+            "labels": {
+              "total-rome": {
+                "x": 1182.29,
+                "y": 730.56,
+                "anchor": "start"
+              },
+              "total-vatican": {
+                "x": 895.03,
+                "y": 730.71,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1038.66,
+                "y": 792.63
+              }
+            ]
+          },
+          "7": {
+            "places": [
+              "total-vatican",
+              "total-rome",
+              "total-milan"
+            ],
+            "labels": {
+              "total-vatican": {
+                "x": 895.03,
+                "y": 730.71,
+                "anchor": "end"
+              },
+              "total-rome": {
+                "x": 1182.29,
+                "y": 730.56,
+                "anchor": "start"
+              },
+              "total-milan": {
+                "x": 806.98,
+                "y": 284.78,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 1038.66,
+                "y": 792.63
+              },
+              {
+                "items": [],
+                "x": 939.63,
+                "y": 554.67
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "italy",
+        "label": "意大利",
+        "countryCode": "IT",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "urban-radial",
+        "mapModeReason": "dense-place-cluster",
+        "mapModeMetrics": {
+          "placeCount": 36,
+          "geoPlaceCount": 36,
+          "widthKm": 301.57,
+          "heightKm": 458.07,
+          "spanKm": 525.74,
+          "averageNearestKm": 1.71,
+          "components": 1,
+          "largestLegKm": 478.53,
+          "jumpRatio": 430.64
+        },
+        "days": [
+          2,
+          3,
+          4,
+          5,
+          7,
+          8
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-04-urban.webp",
+        "title": "意大利 · 旅行路线",
+        "ariaLabel": "意大利模板化旅行路线示意图，共6天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "意大利",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 2,
+            "color": "#e77e22",
+            "placeIds": [
+              "mxp",
+              "milano-centrale",
+              "como-sg",
+              "como-lake",
+              "como-pier",
+              "bellagio",
+              "varenna",
+              "varenna-esino",
+              "milano-centrale"
+            ],
+            "paths": [
+              "M444 355.12 C456.5 312.6 456.5 270.2 444 230.18 C473.5 198.9 509.1 178.1 548.68 169 C741.9 218.6 938.2 238.3 1125.86 227 C968.2 249.7 812.0 242.5 666.32 205.66 C788.0 223.0 906.6 210.6 1015.05 169 C947.0 230.4 867.8 268.5 782 281 C797.0 244.0 800.7 205.9 793.08 169 C679.6 219.4 560.9 240.2 444 230.18"
+            ],
+            "overviewPaths": [
+              "M444 355.12 C456.5 312.6 456.5 270.2 444 230.18"
+            ]
+          },
+          {
+            "day": 3,
+            "color": "#618344",
+            "placeIds": [
+              "milano-centrale",
+              "smn",
+              "duomo-florence",
+              "signoria",
+              "ponte",
+              "michelangelo"
+            ],
+            "paths": [
+              "M444 230.18 C660.9 287.5 866.4 372.5 1048.29 480.22 C1103.4 519.0 1164.6 539.8 1228.27 541.4 C1029.8 571.1 831.3 570.9 644.58 540.6 C707.8 589.2 779.2 616.8 854.5 621.86 C855.7 573.8 869.8 529.9 896.04 492.66"
+            ],
+            "overviewPaths": [
+              "M444 230.18 C660.9 287.5 866.4 372.5 1048.29 480.22 C968.2 509.0 902.3 557.2 854.5 621.86 C855.7 573.8 869.8 529.9 896.04 492.66"
+            ]
+          },
+          {
+            "day": 4,
+            "color": "#209aaa",
+            "placeIds": [
+              "uffizi",
+              "market",
+              "sanlorenzo",
+              "ponte"
+            ],
+            "paths": [
+              "M1110.64 591.83 C1000.4 541.4 884.9 520.5 770.85 530.4 C847.5 528.7 918.5 547.9 979.7 586.83 C933.6 586.2 891.1 598.1 854.5 621.86"
+            ],
+            "overviewPaths": [
+              "M1110.64 591.83 C1020.5 576.4 933.5 586.6 854.5 621.86"
+            ]
+          },
+          {
+            "day": 5,
+            "color": "#8865a5",
+            "placeIds": [
+              "smn",
+              "termini",
+              "colosseum",
+              "forum",
+              "pantheon"
+            ],
+            "paths": [
+              "M1048.29 480.22 C1009.7 631.1 944.1 769.0 855.19 886 C888.2 856.1 910.5 819.7 920.75 778.83 C866.9 834.3 802.3 870.7 730.87 886 C762.6 854.8 783.4 817.4 791.93 776.21"
+            ],
+            "overviewPaths": [
+              "M1048.29 480.22 C1009.7 631.1 944.1 769.0 855.19 886 C888.2 856.1 910.5 819.7 920.75 778.83 C876.7 790.8 832.9 789.9 791.93 776.21"
+            ]
+          },
+          {
+            "day": 7,
+            "color": "#397dc1",
+            "placeIds": [
+              "termini",
+              "milano-centrale",
+              "duomo-milan",
+              "galleria"
+            ],
+            "paths": [
+              "M855.19 886 C690.0 679.0 550.2 456.0 444 230.18 C589.2 298.8 742.0 338.3 893.24 346.5 C787.2 397.4 675.6 418.8 564.84 409.57"
+            ],
+            "overviewPaths": [
+              "M855.19 886 C690.0 679.0 550.2 456.0 444 230.18 C467.1 303.3 508.2 364.2 564.84 409.57"
+            ]
+          },
+          {
+            "day": 8,
+            "color": "#e77e22",
+            "placeIds": [
+              "milano-centrale",
+              "mxp"
+            ],
+            "paths": [
+              "M444 230.18 C431.5 272.7 431.5 315.1 444 355.12"
+            ],
+            "overviewPaths": [
+              "M444 230.18 C431.5 272.7 431.5 315.1 444 355.12"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "mxp",
+            "x": 444,
+            "y": 355.12,
+            "color": "#e77e22",
+            "tx": 366,
+            "ty": 431.12,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "米兰马尔彭萨机场"
+            ],
+            "query": "米兰马尔彭萨机场 意大利",
+            "geo": {
+              "lat": 45.63,
+              "lng": 8.72
+            },
+            "days": [
+              2,
+              8
+            ]
+          },
+          {
+            "id": "milan",
+            "x": 1121.65,
+            "y": 353.48,
+            "color": "#397dc1",
+            "tx": 1089.65,
+            "ty": 403.48,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "米兰"
+            ],
+            "query": "米兰 意大利",
+            "geo": {
+              "lat": 45.464,
+              "lng": 9.19
+            },
+            "days": []
+          },
+          {
+            "id": "florence",
+            "x": 724.02,
+            "y": 643.55,
+            "color": "#397dc1",
+            "tx": 802.02,
+            "ty": 719.55,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "佛罗伦萨"
+            ],
+            "query": "佛罗伦萨 意大利",
+            "geo": {
+              "lat": 43.77,
+              "lng": 11.255
+            },
+            "days": []
+          },
+          {
+            "id": "rome",
+            "x": 1023.07,
+            "y": 707.63,
+            "color": "#397dc1",
+            "tx": 1161.07,
+            "ty": 619.63,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "罗马"
+            ],
+            "query": "罗马 意大利",
+            "geo": {
+              "lat": 41.903,
+              "lng": 12.496
+            },
+            "days": []
+          },
+          {
+            "id": "milano-centrale",
+            "x": 444,
+            "y": 230.18,
+            "color": "#e77e22",
+            "tx": 582,
+            "ty": 142.18,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "米兰中央车站"
+            ],
+            "query": "米兰中央车站 意大利",
+            "geo": {
+              "lat": 45.485,
+              "lng": 9.204
+            },
+            "days": [
+              2,
+              3,
+              7,
+              8
+            ]
+          },
+          {
+            "id": "duomo-milan",
+            "x": 893.24,
+            "y": 346.5,
+            "color": "#397dc1",
+            "tx": 755.24,
+            "ty": 448.5,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "米兰大教堂"
+            ],
+            "query": "米兰大教堂 意大利",
+            "geo": {
+              "lat": 45.4642,
+              "lng": 9.1916
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "galleria",
+            "x": 564.84,
+            "y": 409.57,
+            "color": "#397dc1",
+            "tx": 596.84,
+            "ty": 377.57,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "埃马努埃莱二世长廊"
+            ],
+            "query": "埃马努埃莱二世长廊 意大利",
+            "geo": {
+              "lat": 45.4658,
+              "lng": 9.19
+            },
+            "days": [
+              7
+            ]
+          },
+          {
+            "id": "smn",
+            "x": 1048.29,
+            "y": 480.22,
+            "color": "#618344",
+            "tx": 1126.29,
+            "ty": 418.22,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "佛罗伦萨SMN车站"
+            ],
+            "query": "佛罗伦萨SMN车站 意大利",
+            "geo": {
+              "lat": 43.7765,
+              "lng": 11.248
+            },
+            "days": [
+              3,
+              5
+            ]
+          },
+          {
+            "id": "duomo-florence",
+            "x": 1228.27,
+            "y": 541.4,
+            "color": "#618344",
+            "tx": 1090.27,
+            "ty": 643.4,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "圣母百花大教堂"
+            ],
+            "query": "圣母百花大教堂 意大利",
+            "geo": {
+              "lat": 43.7731,
+              "lng": 11.256
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "signoria",
+            "x": 644.58,
+            "y": 540.6,
+            "color": "#618344",
+            "tx": 566.58,
+            "ty": 478.6,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "领主广场"
+            ],
+            "query": "领主广场 意大利",
+            "geo": {
+              "lat": 43.7696,
+              "lng": 11.2558
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "ponte",
+            "x": 854.5,
+            "y": 621.86,
+            "color": "#618344",
+            "tx": 992.5,
+            "ty": 533.86,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "老桥"
+            ],
+            "query": "老桥 意大利",
+            "geo": {
+              "lat": 43.768,
+              "lng": 11.2532
+            },
+            "days": [
+              3,
+              4
+            ]
+          },
+          {
+            "id": "michelangelo",
+            "x": 896.04,
+            "y": 492.66,
+            "color": "#618344",
+            "tx": 864.04,
+            "ty": 460.66,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "米开朗琪罗广场（选做）"
+            ],
+            "query": "米开朗琪罗广场（选做） 意大利",
+            "geo": {
+              "lat": 43.7629,
+              "lng": 11.2651
+            },
+            "days": [
+              3
+            ]
+          },
+          {
+            "id": "uffizi",
+            "x": 1110.64,
+            "y": 591.83,
+            "color": "#209aaa",
+            "tx": 1248.64,
+            "ty": 503.83,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "乌菲兹美术馆"
+            ],
+            "query": "乌菲兹美术馆 意大利",
+            "geo": {
+              "lat": 43.7678,
+              "lng": 11.2553
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "market",
+            "x": 770.85,
+            "y": 530.4,
+            "color": "#209aaa",
+            "tx": 692.85,
+            "ty": 606.4,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "佛罗伦萨中央市场"
+            ],
+            "query": "佛罗伦萨中央市场 意大利",
+            "geo": {
+              "lat": 43.7763,
+              "lng": 11.2532
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "sanlorenzo",
+            "x": 979.7,
+            "y": 586.83,
+            "color": "#209aaa",
+            "tx": 947.7,
+            "ty": 554.83,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "圣洛伦佐街区"
+            ],
+            "query": "圣洛伦佐街区 意大利",
+            "geo": {
+              "lat": 43.7749,
+              "lng": 11.2539
+            },
+            "days": [
+              4
+            ]
+          },
+          {
+            "id": "termini",
+            "x": 855.19,
+            "y": 886,
+            "color": "#8865a5",
+            "tx": 777.19,
+            "ty": 962,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "罗马Termini车站"
+            ],
+            "query": "罗马Termini车站 意大利",
+            "geo": {
+              "lat": 41.901,
+              "lng": 12.501
+            },
+            "days": [
+              5,
+              7
+            ]
+          },
+          {
+            "id": "pantheon",
+            "x": 791.93,
+            "y": 776.21,
+            "color": "#8865a5",
+            "tx": 653.93,
+            "ty": 688.21,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "万神殿"
+            ],
+            "query": "万神殿 意大利",
+            "geo": {
+              "lat": 41.8986,
+              "lng": 12.4769
+            },
+            "days": [
+              5
+            ]
+          },
+          {
+            "id": "navona",
+            "x": 1246,
+            "y": 797.21,
+            "color": "#397dc1",
+            "tx": 1214,
+            "ty": 765.21,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "纳沃纳广场"
+            ],
+            "query": "纳沃纳广场 意大利",
+            "geo": {
+              "lat": 41.8992,
+              "lng": 12.4731
+            },
+            "days": []
+          },
+          {
+            "id": "trevi",
+            "x": 1152.67,
+            "y": 717.79,
+            "color": "#397dc1",
+            "tx": 1184.67,
+            "ty": 685.79,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "特雷维喷泉"
+            ],
+            "query": "特雷维喷泉 意大利",
+            "geo": {
+              "lat": 41.9009,
+              "lng": 12.4833
+            },
+            "days": []
+          },
+          {
+            "id": "colosseum",
+            "x": 920.75,
+            "y": 778.83,
+            "color": "#8865a5",
+            "tx": 888.75,
+            "ty": 828.83,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "斗兽场"
+            ],
+            "query": "斗兽场 意大利",
+            "geo": {
+              "lat": 41.8902,
+              "lng": 12.4922
+            },
+            "days": [
+              5
+            ]
+          },
+          {
+            "id": "forum",
+            "x": 730.87,
+            "y": 886,
+            "color": "#8865a5",
+            "tx": 808.87,
+            "ty": 962,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "古罗马广场"
+            ],
+            "query": "古罗马广场 意大利",
+            "geo": {
+              "lat": 41.8925,
+              "lng": 12.4853
+            },
+            "days": [
+              5
+            ]
+          },
+          {
+            "id": "capitol",
+            "x": 1175.49,
+            "y": 886,
+            "color": "#397dc1",
+            "tx": 1207.49,
+            "ty": 854,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "卡比托利欧广场"
+            ],
+            "query": "卡比托利欧广场 意大利",
+            "geo": {
+              "lat": 41.8933,
+              "lng": 12.4828
+            },
+            "days": []
+          },
+          {
+            "id": "venezia",
+            "x": 629.06,
+            "y": 808.45,
+            "color": "#397dc1",
+            "tx": 491.06,
+            "ty": 720.45,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "威尼斯广场"
+            ],
+            "query": "威尼斯广场 意大利",
+            "geo": {
+              "lat": 41.8958,
+              "lng": 12.4823
+            },
+            "days": []
+          },
+          {
+            "id": "spagna",
+            "x": 980.59,
+            "y": 886,
+            "color": "#397dc1",
+            "tx": 1118.59,
+            "ty": 988,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "西班牙广场"
+            ],
+            "query": "西班牙广场 意大利",
+            "geo": {
+              "lat": 41.906,
+              "lng": 12.4828
+            },
+            "days": []
+          },
+          {
+            "id": "borghese",
+            "x": 1081.16,
+            "y": 810.77,
+            "color": "#397dc1",
+            "tx": 1219.16,
+            "ty": 912.77,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "博尔盖塞公园"
+            ],
+            "query": "博尔盖塞公园 意大利",
+            "geo": {
+              "lat": 41.9122,
+              "lng": 12.4852
+            },
+            "days": []
+          },
+          {
+            "id": "como-station",
+            "x": 1010.49,
+            "y": 293.85,
+            "color": "#397dc1",
+            "tx": 1042.49,
+            "ty": 261.85,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Como San Giovanni（科莫圣乔瓦尼车站）车站"
+            ],
+            "query": "Como San Giovanni（科莫圣乔瓦尼车站）车站 意大利",
+            "geo": {
+              "lat": 45.8096,
+              "lng": 9.072
+            },
+            "days": []
+          },
+          {
+            "id": "como-duomo",
+            "x": 664.33,
+            "y": 328.41,
+            "color": "#397dc1",
+            "tx": 696.33,
+            "ty": 296.41,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "科莫大教堂"
+            ],
+            "query": "科莫大教堂 意大利",
+            "geo": {
+              "lat": 45.8118,
+              "lng": 9.0834
+            },
+            "days": []
+          },
+          {
+            "id": "como-lake",
+            "x": 1125.86,
+            "y": 227,
+            "color": "#e77e22",
+            "tx": 1263.86,
+            "ty": 139,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "科莫湖 · 科莫镇湖滨"
+            ],
+            "query": "科莫湖 · 科莫镇湖滨 意大利",
+            "geo": {
+              "lat": 45.814,
+              "lng": 9.079
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "saronno",
+            "x": 548.9,
+            "y": 289.22,
+            "color": "#397dc1",
+            "tx": 626.9,
+            "ty": 227.22,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Saronno（萨龙诺）换乘站"
+            ],
+            "query": "Saronno（萨龙诺）换乘站 意大利",
+            "geo": {
+              "lat": 45.626,
+              "lng": 9.031
+            },
+            "days": []
+          },
+          {
+            "id": "como-lago",
+            "x": 905.35,
+            "y": 223.45,
+            "color": "#397dc1",
+            "tx": 983.35,
+            "ty": 161.45,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Como Lago（科莫湖车站）车站"
+            ],
+            "query": "Como Lago（科莫湖车站）车站 意大利",
+            "geo": {
+              "lat": 45.8155,
+              "lng": 9.083
+            },
+            "days": []
+          },
+          {
+            "id": "cadorna",
+            "x": 776.75,
+            "y": 399.97,
+            "color": "#397dc1",
+            "tx": 854.75,
+            "ty": 337.97,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "米兰Cadorna车站"
+            ],
+            "query": "米兰Cadorna车站 意大利",
+            "geo": {
+              "lat": 45.468,
+              "lng": 9.176
+            },
+            "days": []
+          },
+          {
+            "id": "como-sg",
+            "x": 548.68,
+            "y": 169,
+            "color": "#e77e22",
+            "tx": 686.68,
+            "ty": 81,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Como S. Giovanni（科莫圣乔瓦尼车站）车站"
+            ],
+            "query": "Como S. Giovanni（科莫圣乔瓦尼车站）车站 意大利",
+            "geo": {
+              "lat": 45.8097,
+              "lng": 9.0724
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "como-pier",
+            "x": 666.32,
+            "y": 205.66,
+            "color": "#e77e22",
+            "tx": 528.32,
+            "ty": 117.66,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Como（科莫）游船码头"
+            ],
+            "query": "Como（科莫）游船码头 意大利",
+            "geo": {
+              "lat": 45.814,
+              "lng": 9.08
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "bellagio",
+            "x": 1015.05,
+            "y": 169,
+            "color": "#e77e22",
+            "tx": 1153.05,
+            "ty": 81,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Bellagio（贝拉焦）"
+            ],
+            "query": "Bellagio（贝拉焦） 意大利",
+            "geo": {
+              "lat": 45.987,
+              "lng": 9.261
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "varenna",
+            "x": 782,
+            "y": 281,
+            "color": "#e77e22",
+            "tx": 750,
+            "ty": 249,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "Varenna（瓦伦纳）"
+            ],
+            "query": "Varenna（瓦伦纳） 意大利",
+            "geo": {
+              "lat": 46.011,
+              "lng": 9.284
+            },
+            "days": [
+              2
+            ]
+          },
+          {
+            "id": "varenna-esino",
+            "x": 793.08,
+            "y": 169,
+            "color": "#e77e22",
+            "tx": 931.08,
+            "ty": 81,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "Varenna-Esino（瓦伦纳埃西诺车站）车站"
+            ],
+            "query": "Varenna-Esino（瓦伦纳埃西诺车站）车站 意大利",
+            "geo": {
+              "lat": 46.017,
+              "lng": 9.284
+            },
+            "days": [
+              2
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "mxp",
+          "milano-centrale",
+          "smn",
+          "ponte",
+          "michelangelo",
+          "uffizi",
+          "termini",
+          "colosseum",
+          "pantheon",
+          "galleria"
+        ],
+        "dailyLayouts": {
+          "2": {
+            "places": [
+              "mxp",
+              "milano-centrale",
+              "como-sg",
+              "como-lake",
+              "como-pier",
+              "bellagio",
+              "varenna",
+              "varenna-esino"
+            ],
+            "labels": {
+              "mxp": {
+                "x": 366,
+                "y": 431.12,
+                "anchor": "end"
+              },
+              "milano-centrale": {
+                "x": 582,
+                "y": 142.18,
+                "anchor": "start"
+              },
+              "como-sg": {
+                "x": 686.68,
+                "y": 81,
+                "anchor": "start"
+              },
+              "como-lake": {
+                "x": 1263.86,
+                "y": 139,
+                "anchor": "start"
+              },
+              "como-pier": {
+                "x": 528.32,
+                "y": 117.66,
+                "anchor": "end"
+              },
+              "bellagio": {
+                "x": 1153.05,
+                "y": 81,
+                "anchor": "start"
+              },
+              "varenna": {
+                "x": 750,
+                "y": 249,
+                "anchor": "end"
+              },
+              "varenna-esino": {
+                "x": 931.08,
+                "y": 81,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 444,
+                "y": 292.65
+              },
+              {
+                "items": [],
+                "x": 496.34,
+                "y": 199.59
+              },
+              {
+                "items": [],
+                "x": 837.27,
+                "y": 198
+              },
+              {
+                "items": [],
+                "x": 896.09,
+                "y": 216.33
+              },
+              {
+                "items": [],
+                "x": 840.68,
+                "y": 187.33
+              },
+              {
+                "items": [],
+                "x": 898.52,
+                "y": 225
+              },
+              {
+                "items": [],
+                "x": 787.54,
+                "y": 225
+              },
+              {
+                "items": [],
+                "x": 618.54,
+                "y": 199.59
+              }
+            ]
+          },
+          "3": {
+            "places": [
+              "milano-centrale",
+              "smn",
+              "duomo-florence",
+              "signoria",
+              "ponte",
+              "michelangelo"
+            ],
+            "labels": {
+              "milano-centrale": {
+                "x": 582,
+                "y": 142.18,
+                "anchor": "start"
+              },
+              "smn": {
+                "x": 1126.29,
+                "y": 418.22,
+                "anchor": "start"
+              },
+              "duomo-florence": {
+                "x": 1090.27,
+                "y": 643.4,
+                "anchor": "end"
+              },
+              "signoria": {
+                "x": 566.58,
+                "y": 478.6,
+                "anchor": "end"
+              },
+              "ponte": {
+                "x": 992.5,
+                "y": 533.86,
+                "anchor": "start"
+              },
+              "michelangelo": {
+                "x": 864.04,
+                "y": 460.66,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 746.14,
+                "y": 355.2
+              },
+              {
+                "items": [],
+                "x": 1138.28,
+                "y": 510.81
+              },
+              {
+                "items": [],
+                "x": 936.42,
+                "y": 541
+              },
+              {
+                "items": [],
+                "x": 749.54,
+                "y": 581.23
+              },
+              {
+                "items": [],
+                "x": 875.27,
+                "y": 557.26
+              }
+            ]
+          },
+          "4": {
+            "places": [
+              "uffizi",
+              "market",
+              "sanlorenzo",
+              "ponte"
+            ],
+            "labels": {
+              "uffizi": {
+                "x": 1248.64,
+                "y": 503.83,
+                "anchor": "start"
+              },
+              "market": {
+                "x": 692.85,
+                "y": 606.4,
+                "anchor": "end"
+              },
+              "sanlorenzo": {
+                "x": 947.7,
+                "y": 554.83,
+                "anchor": "end"
+              },
+              "ponte": {
+                "x": 992.5,
+                "y": 533.86,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 940.75,
+                "y": 561.12
+              },
+              {
+                "items": [],
+                "x": 875.28,
+                "y": 558.62
+              },
+              {
+                "items": [],
+                "x": 917.1,
+                "y": 604.35
+              }
+            ]
+          },
+          "5": {
+            "places": [
+              "smn",
+              "termini",
+              "colosseum",
+              "forum",
+              "pantheon"
+            ],
+            "labels": {
+              "smn": {
+                "x": 1126.29,
+                "y": 418.22,
+                "anchor": "start"
+              },
+              "termini": {
+                "x": 777.19,
+                "y": 962,
+                "anchor": "end"
+              },
+              "colosseum": {
+                "x": 888.75,
+                "y": 828.83,
+                "anchor": "end"
+              },
+              "forum": {
+                "x": 808.87,
+                "y": 962,
+                "anchor": "start"
+              },
+              "pantheon": {
+                "x": 653.93,
+                "y": 688.21,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 951.74,
+                "y": 683.11
+              },
+              {
+                "items": [],
+                "x": 887.97,
+                "y": 832.41
+              },
+              {
+                "items": [],
+                "x": 825.81,
+                "y": 832.41
+              },
+              {
+                "items": [],
+                "x": 761.4,
+                "y": 831.11
+              }
+            ]
+          },
+          "7": {
+            "places": [
+              "termini",
+              "milano-centrale",
+              "duomo-milan",
+              "galleria"
+            ],
+            "labels": {
+              "termini": {
+                "x": 777.19,
+                "y": 962,
+                "anchor": "end"
+              },
+              "milano-centrale": {
+                "x": 582,
+                "y": 142.18,
+                "anchor": "start"
+              },
+              "duomo-milan": {
+                "x": 755.24,
+                "y": 448.5,
+                "anchor": "end"
+              },
+              "galleria": {
+                "x": 596.84,
+                "y": 377.57,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 649.6,
+                "y": 558.09
+              },
+              {
+                "items": [],
+                "x": 668.62,
+                "y": 288.34
+              },
+              {
+                "items": [],
+                "x": 729.04,
+                "y": 378.03
+              }
+            ]
+          },
+          "8": {
+            "places": [
+              "milano-centrale",
+              "mxp"
+            ],
+            "labels": {
+              "milano-centrale": {
+                "x": 582,
+                "y": 142.18,
+                "anchor": "start"
+              },
+              "mxp": {
+                "x": 366,
+                "y": 431.12,
+                "anchor": "end"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 444,
+                "y": 292.65
+              }
+            ]
+          }
+        }
+      },
+      {
+        "id": "vatican",
+        "label": "梵蒂冈",
+        "countryCode": "VA",
+        "scope": "template-schematic",
+        "mapMode": "frozen-template",
+        "templateId": "urban-radial",
+        "mapModeReason": "compact-city-route",
+        "mapModeMetrics": {
+          "placeCount": 4,
+          "geoPlaceCount": 4,
+          "widthKm": 0.31,
+          "heightKm": 0.48,
+          "spanKm": 0.57,
+          "averageNearestKm": 0.21,
+          "components": 1,
+          "largestLegKm": 0.41,
+          "jumpRatio": 0.41
+        },
+        "days": [
+          6
+        ],
+        "canvas": {
+          "width": 1448,
+          "height": 1086
+        },
+        "projection": {
+          "type": "relative-schematic",
+          "bounds": null
+        },
+        "baseImage": "assets/maps/templates/template-04-urban.webp",
+        "title": "梵蒂冈 · 旅行路线",
+        "ariaLabel": "梵蒂冈模板化旅行路线示意图，共1天",
+        "disclaimer": "本图仅表达地点的相对方位与路线顺序，不代表真实比例或精确地理边界。",
+        "heading": {
+          "text": "梵蒂冈",
+          "x": 33,
+          "y": 105,
+          "size": 40
+        },
+        "legend": {
+          "x": 35,
+          "y": 168,
+          "gap": 43
+        },
+        "annotations": [],
+        "routes": [
+          {
+            "day": 6,
+            "color": "#df6185",
+            "placeIds": [
+              "vatican-museums",
+              "sistine",
+              "stpeter",
+              "stpeter-square"
+            ],
+            "paths": [
+              "M702.92 305.65 C707.8 439.0 741.6 564.5 802.42 674.84 C773.8 711.6 737.4 737.7 695.58 751.63 C794.9 780.0 894.0 779.2 987.08 749.35"
+            ],
+            "overviewPaths": [
+              "M702.92 305.65 C707.8 439.0 741.6 564.5 802.42 674.84 C773.8 711.6 737.4 737.7 695.58 751.63 C794.9 780.0 894.0 779.2 987.08 749.35"
+            ]
+          }
+        ],
+        "places": [
+          {
+            "id": "vatican-museums",
+            "x": 702.92,
+            "y": 305.65,
+            "color": "#df6185",
+            "tx": 734.92,
+            "ty": 273.65,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "梵蒂冈博物馆"
+            ],
+            "query": "梵蒂冈博物馆 梵蒂冈",
+            "geo": {
+              "lat": 41.9065,
+              "lng": 12.4536
+            },
+            "days": [
+              6
+            ]
+          },
+          {
+            "id": "sistine",
+            "x": 802.42,
+            "y": 674.84,
+            "color": "#df6185",
+            "tx": 770.42,
+            "ty": 642.84,
+            "size": 24,
+            "anchor": "end",
+            "lines": [
+              "西斯廷礼拜堂（馆内）"
+            ],
+            "query": "西斯廷礼拜堂（馆内） 梵蒂冈",
+            "geo": {
+              "lat": 41.9029,
+              "lng": 12.4545
+            },
+            "days": [
+              6
+            ]
+          },
+          {
+            "id": "stpeter",
+            "x": 695.58,
+            "y": 751.63,
+            "color": "#df6185",
+            "tx": 773.58,
+            "ty": 827.63,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "圣彼得大教堂"
+            ],
+            "query": "圣彼得大教堂 梵蒂冈",
+            "geo": {
+              "lat": 41.9022,
+              "lng": 12.4539
+            },
+            "days": [
+              6
+            ]
+          },
+          {
+            "id": "stpeter-square",
+            "x": 987.08,
+            "y": 749.35,
+            "color": "#df6185",
+            "tx": 1125.08,
+            "ty": 661.35,
+            "size": 24,
+            "anchor": "start",
+            "lines": [
+              "圣彼得广场"
+            ],
+            "query": "圣彼得广场 梵蒂冈",
+            "geo": {
+              "lat": 41.9022,
+              "lng": 12.4573
+            },
+            "days": [
+              6
+            ]
+          }
+        ],
+        "overviewPlaceIds": [
+          "vatican-museums",
+          "sistine",
+          "stpeter",
+          "stpeter-square"
+        ],
+        "dailyLayouts": {
+          "6": {
+            "places": [
+              "vatican-museums",
+              "sistine",
+              "stpeter",
+              "stpeter-square"
+            ],
+            "labels": {
+              "vatican-museums": {
+                "x": 734.92,
+                "y": 273.65,
+                "anchor": "start"
+              },
+              "sistine": {
+                "x": 770.42,
+                "y": 642.84,
+                "anchor": "end"
+              },
+              "stpeter": {
+                "x": 773.58,
+                "y": 827.63,
+                "anchor": "start"
+              },
+              "stpeter-square": {
+                "x": 1125.08,
+                "y": 661.35,
+                "anchor": "start"
+              }
+            },
+            "transport": [
+              {
+                "items": [],
+                "x": 752.67,
+                "y": 490.25
+              },
+              {
+                "items": [],
+                "x": 749,
+                "y": 713.24
+              },
+              {
+                "items": [],
+                "x": 841.33,
+                "y": 750.49
+              }
+            ]
+          }
+        }
+      }
+    ]
+  },
+  "accommodationPlanning": {
+    "budget": {
+      "currency": "CNY",
+      "min": 500,
+      "max": 700,
+      "unit": "间／晚",
+      "adults": 2,
+      "rooms": 1
+    },
+    "checkedAt": "2026-11-09",
+    "note": "本板块是按行程位置筛选的携程候选，非已核实预算内清单。携程公开页未返回你们入住日期的实时房价，不能确认以下9家在500–700元内有房。评分来自本次可读页面快照，存在不同缓存版本；价格、税费、双床与取消条件请在携程重新确认。",
+    "cities": [
+      {
+        "city": "米兰",
+        "dates": [
+          [
+            "2027-02-09",
+            "2027-02-10"
+          ],
+          [
+            "2027-02-14",
+            "2027-02-15"
+          ]
+        ],
+        "reason": "两次单晚住宿，优先中央车站周边；利于科莫湖出发、城际高铁和15日机场列车。",
+        "hotels": [
+          {
+            "name": "宜必思米兰中心酒店",
+            "en": "Ibis Milano Centro",
+            "rating": "4.1/5",
+            "url": "https://hotels.ctrip.com/hotels/2081605.html",
+            "pros": "有免费行李寄存，靠近Repubblica地铁站，适合公共交通出行。",
+            "cons": "点评多次提到房间较小；与中央车站有步行距离，拖箱不如站前方便。",
+            "note": "",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          },
+          {
+            "name": "米兰斯卡拉蒂酒店",
+            "en": "Scarlatti Hotel Milano",
+            "rating": "4.3/5",
+            "url": "https://hotels.ctrip.com/hotels/2474207.html",
+            "pros": "中央车站周边，点评称附近超市方便、部分房间较宽敞。",
+            "cons": "有隔音一般的点评；部分住客提到浴室收纳不便。",
+            "note": "",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          },
+          {
+            "name": "米兰中央旅馆iH酒店",
+            "en": "IH Hotels Milano Centrale",
+            "rating": "4.4/5",
+            "url": "https://hotels.ctrip.com/hotels/771490.html",
+            "pros": "近中央车站，携程列有免费寄存，适合落地日及返程前夜。",
+            "cons": "点评提到部分房间较小、可能分配附楼；须确认主楼及双床。",
+            "note": "",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          }
+        ]
+      },
+      {
+        "city": "佛罗伦萨",
+        "dates": [
+          [
+            "2027-02-10",
+            "2027-02-12"
+          ]
+        ],
+        "reason": "连住2晚，优先SMN车站与老城之间，方便步行及转场。",
+        "hotels": [
+          {
+            "name": "阿尔巴宫殿酒店",
+            "en": "Hotel Alba Palace",
+            "rating": "4.4/5",
+            "url": "https://hotels.ctrip.com/hotels/2194956.html",
+            "pros": "近SMN车站，点评多提早餐和交通便利；方便两天老城步行。",
+            "cons": "部分住客反映房间／浴室较小、隔音不足，房型间可能有差异。",
+            "note": "重新作为携程对比候选，不再绑定每日行程或地图。",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          },
+          {
+            "name": "c-外交官酒店",
+            "en": "c-hotels Diplomat",
+            "rating": "4.3/5",
+            "url": "https://hotels.ctrip.com/hotels/2134892.html",
+            "pros": "靠近SMN车站，出站即易抵达；携程列有免费寄存。",
+            "cons": "点评提及隔音一般；若怕吵，订房时询问背街安静房。",
+            "note": "",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          },
+          {
+            "name": "巴黎酒店",
+            "en": "Hotel Paris",
+            "rating": "4.4/5",
+            "url": "https://m.ctrip.com/html5/hotel/hoteldetail/2149321.html",
+            "pros": "携程显示距SMN步行约620米，靠近老城，点评称早餐丰富。",
+            "cons": "历史建筑风格；搬运行李、楼层与电梯到达情况需询问，此为订前待核实的取舍。",
+            "note": "",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          }
+        ]
+      },
+      {
+        "city": "罗马",
+        "dates": [
+          [
+            "2027-02-12",
+            "2027-02-14"
+          ]
+        ],
+        "reason": "连住2晚，兼顾Termini高铁、斗兽场与梵蒂冈；梵蒂冈不另订住宿。",
+        "hotels": [
+          {
+            "name": "肯尼迪酒店",
+            "en": "Hotel Kennedy",
+            "rating": "4.1/5",
+            "url": "https://hotels.ctrip.com/hotels/761347.html",
+            "pros": "近Termini，便于高铁及地铁；页面列有行李寄存。",
+            "cons": "设施较传统；应核对主楼／附楼及淋浴空间，避免误订不合适房型。",
+            "note": "",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          },
+          {
+            "name": "罗马因佩罗酒店",
+            "en": "Hotel Impero Rome",
+            "rating": "4.2/5",
+            "url": "https://hotels.ctrip.com/hotels/761142.html",
+            "pros": "位于Termini与Repubblica之间，便于市内公共交通和去火车站。",
+            "cons": "点评称装修较旧；早餐是否包含须逐房价确认，不能默认免费。",
+            "note": "",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          },
+          {
+            "name": "蜂巢酒店",
+            "en": "The Hive Hotel",
+            "rating": "4.4/5",
+            "url": "https://hotels.ctrip.com/hotel/rome343",
+            "pros": "携程列于Termini区域，按区域位置判断适合本次高铁转场。",
+            "cons": "日期房价未取得，可能超预算；尚未读取足够差评，不能编造具体设施缺点。",
+            "note": "链接为携程罗马列表，请搜索英文名并核对酒店身份。",
+            "price": null,
+            "priceStatus": "指定日期实时房价未取得；尚未确认符合500–700元预算"
+          }
+        ]
+      }
+    ]
+  }
+}

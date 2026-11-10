@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#f3f6f2">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+  <title>AI 旅行网页模板</title>
+  <link rel="stylesheet" href="styles.css?v=20260910-3">
+  <link rel="stylesheet" href="ledger.css?v=20260910-2">
+  <script src="runtime-storage.js?v=20260910-2" defer></script>
+  <script src="overview-map.js?v=20261109-all-photo-pins" defer></script>
+  <script src="route-ui.js?v=20261109-all-photo-key" defer></script>
+  <script src="app.js?v=20261109-ctrip-stays" defer></script>
+  <script src="ticket-pdf-preview.js?v=20260910-2" defer></script>
+  <script src="ledger.js?v=20260910-3" defer></script>
+  <script src="site-navigation.js?v=20260910-2" defer></script>
+<style id="trip-photo-styles">.trip-photo-gallery{margin-top:48px}.trip-photo-gallery .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:20px}.trip-photo-gallery article{overflow:hidden;background:#fff;border:1px solid #dfe5da;border-radius:18px;min-width:0}.trip-photo-gallery article>a{display:block}.trip-photo-gallery img{display:block;width:100%;height:250px;object-fit:contain;background:#f0f0e9}.trip-photo-gallery article>div{padding:20px}.trip-photo-gallery h3{margin:0 0 12px}.trip-photo-gallery .trip-photo-title{margin:32px 0 18px;font-size:23px}.trip-photo-gallery p{line-height:1.8;margin:10px 0 16px}.trip-photo-gallery a{color:#476447;text-decoration:underline;text-underline-offset:4px}.trip-photo-gallery b{color:#8c641e}.trip-photo-footnote{font-size:13px;color:#65705f}.trip-photo-summary{padding:18px;background:#edf1e7;border-radius:14px}@media(max-width:600px){.trip-photo-gallery img{height:230px}}</style><style>.planning-info-card{padding:20px;margin:20px 0;background:#f4f5ee;border:1px solid #dfe5da;border-radius:16px}.planning-info-card h3{margin:0 0 12px}.planning-info-card p,.planning-info-card li{line-height:1.8}.planning-info-card small{color:#65705f}.planning-info-card a{color:#426e58;text-decoration:underline}.planning-info-card ul{padding-left:22px}</style><style>.map-place-dot:has(.map-pin-photo){width:52px!important;height:52px!important;background:white!important;border:2px solid white!important;border-radius:12px!important;box-shadow:0 3px 14px #0004;z-index:5}.map-pin-photo{display:block;width:100%;height:100%;object-fit:cover;border-radius:9px}.map-photo-label{position:absolute!important;display:block!important;top:100%!important;left:50%!important;transform:translateX(-50%);height:auto!important;width:max-content!important;max-width:130px;background:white!important;border-radius:5px;padding:3px 5px;font-size:11px;line-height:1.4;color:#263b35}.map-popup-photo{margin:12px 0}.map-popup-photo img{display:block;width:100%;max-height:210px;object-fit:contain;border-radius:10px}.map-popup-photo figcaption{font-size:12px;margin-top:6px}.route-popover{max-height:85vh;overflow:auto}</style><style>.map-place-dot .map-point-number{display:grid;place-items:center;width:22px;height:22px;font:bold 11px/1 Arial,sans-serif;color:white;box-sizing:border-box}.map-place-dot:has(.map-pin-photo) .map-point-number{position:absolute;top:-7px;right:-7px;background:var(--route-color);border:2px solid white;border-radius:50%;z-index:2}.map-place-dot:not(:has(.map-pin-photo)){width:24px;height:24px}.map-place-dot:not(:has(.map-pin-photo)) .map-point-number{background:var(--route-color);border:2px solid white;border-radius:50%}@media(max-width:699px){.is-daily .map-place-dot .map-point-number{width:20px;height:20px;font-size:10px}}</style><style>.travel-map-canvas{container-type:inline-size}.map-place-dot:has(.map-pin-photo){width:5cqw!important;height:5cqw!important;min-width:26px;min-height:26px;max-width:64px;max-height:64px}.map-place-dot:has(.map-pin-photo) .map-point-number{width:20px;height:20px;top:-6px;right:-6px;font-size:10px}</style><style>.map-photo-key{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:8px 16px;padding:16px;background:#f5f7ef;border-radius:0 0 12px 12px;font-size:12px;line-height:1.6}.map-photo-key>span{display:flex;gap:7px;align-items:baseline}.map-photo-key b{display:inline-grid;place-items:center;min-width:22px;height:22px;border-radius:50%;background:var(--route-color);color:white;font:700 12px Arial;flex-shrink:0}</style><style>.accommodation-note{padding:18px;background:#fff4df;border-radius:12px;line-height:1.8}.accommodation-city{margin:32px 0}.accommodation-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));gap:16px}.hotel-option{background:white;padding:22px;border:1px solid #dfe5da;border-radius:16px}.hotel-option h4{margin:0;font-size:19px}.hotel-option p{line-height:1.75}.hotel-option a{color:#426e58;text-decoration:underline}.hotel-price-pending{color:#916b28;font-size:13px}.hotel-date-links{display:flex;flex-wrap:wrap;gap:10px;font-size:13px}</style></head>
+<body>
+  <a class="skip-link" id="skip-link" href="#main">跳到主要内容</a>
+  <header class="topbar" id="topbar">
+    <a class="wordmark" id="wordmark" href="#top" aria-label="返回顶部"></a>
+    <nav class="primary-navigation" aria-label="主要模块">
+      <details class="travel-navigation" id="travel-navigation" hidden>
+        <summary id="travel-navigation-trigger">旅行信息</summary>
+        <div class="travel-navigation-menu" role="menu" aria-label="旅行信息栏目">
+          <a href="#flights" role="menuitem" data-module="flights" hidden>航班</a>
+          <a href="#route" role="menuitem" data-module="overview" hidden>路线</a>
+          <a href="#itinerary" role="menuitem" data-module="itinerary" hidden>行程</a>
+          <a href="#drive" role="menuitem" data-module="driving" hidden>自驾</a>
+          <a href="#prep" role="menuitem" data-module="todo" hidden>Todo</a>
+        </div>
+      </details>
+      <a class="primary-navigation__ledger" id="ledger-navigation-link" href="#ledger" data-module="ledger" hidden>记账</a>
+    </nav>
+  </header>
+
+  <main id="main" data-site-view="travel">
+    <section class="hero" id="top" aria-labelledby="trip-title">
+      <div class="hero__eyebrow" id="trip-eyebrow"></div>
+      <h1 id="trip-title">正在载入旅程</h1>
+      <p class="hero__date" id="trip-date"></p>
+    </section>
+
+    <section class="section flights-section" id="flights" aria-labelledby="flights-title" data-module="flights" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">BOARDING</p>
+          <h2 id="flights-title">航班行程</h2>
+        </div>
+        <p class="section-index" id="flight-index" aria-live="polite">1 / 3</p>
+      </div>
+      <div class="flight-carousel" id="flight-carousel" aria-label="航班卡片，可左右滑动"></div>
+      <div class="carousel-dots" id="flight-dots" aria-hidden="true"></div>
+    </section>
+
+    <section class="section route-section" id="route" aria-labelledby="route-title" data-module="overview" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">THE WHOLE JOURNEY</p>
+          <h2 id="route-title">本次旅程</h2>
+        </div>
+        <span class="soft-label" id="route-day-count"></span>
+      </div>
+      <div id="route-explorer"></div>
+      <p class="route-caption">路线为行程示意，实际驾驶和步行请使用当天的 Google Maps 导航。</p>
+    </section>
+
+    <section class="section itinerary-section" id="itinerary" aria-labelledby="itinerary-title" data-module="itinerary" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">DAY BY DAY</p>
+          <h2 id="itinerary-title">每日行程</h2>
+        </div>
+        <span class="soft-label" id="day-count"></span>
+      </div>
+      <div class="timeline" id="timeline"></div>
+</section>
+
+    <section class="section drive-section" id="drive" aria-labelledby="drive-title" data-module="driving" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">ON THE ROAD</p>
+          <h2 id="drive-title">自驾信息</h2>
+        </div>
+        <span class="soft-label" id="rental-provider-label">RENTAL</span>
+      </div>
+      <div id="rental-card"></div>
+      <div class="accordion-stack" id="drive-notes"></div>
+    </section>
+
+    <section class="section prep-section" id="prep" aria-labelledby="prep-title" data-module="todo" hidden>
+      <div class="section-heading">
+        <div>
+          <p class="section-kicker">BEFORE WE GO</p>
+          <h2 id="prep-title">旅行前准备</h2>
+        </div>
+        <span class="soft-label" id="todo-progress">0 / 0</span>
+      </div>
+      <form class="todo-form" id="todo-form">
+        <input id="todo-input" type="text" maxlength="80" placeholder="添加一项准备事项" aria-label="准备事项">
+        <button type="submit">添加</button>
+      </form>
+      <div class="todo-list" id="todo-list"></div>
+    </section>
+
+    <footer class="footer">
+      <p id="footer-mark"></p>
+      <a href="#top">回到顶部 ↑</a>
+    </footer>
+  </main>
+
+  <main class="ledger-view" id="ledger-view" data-site-view="ledger" data-module="ledger" hidden>
+    <div id="ledger-root"></div>
+  </main>
+
+  <dialog class="map-dialog" id="map-dialog">
+    <button type="button" class="dialog-close" id="map-close" aria-label="关闭路线图">关闭</button>
+    <div id="map-dialog-content"></div>
+  </dialog>
+
+  <dialog class="ticket-dialog" id="ticket-dialog" aria-labelledby="ticket-dialog-title">
+    <header>
+      <div>
+        <span>门票与预订</span>
+        <h2 id="ticket-dialog-title">门票详情</h2>
+      </div>
+      <button type="button" id="ticket-dialog-close" aria-label="关闭门票详情">关闭</button>
+    </header>
+    <div class="ticket-dialog__body" id="ticket-dialog-body"></div>
+  </dialog>
+
+  <div class="place-map-overlay" id="place-map" hidden>
+    <section class="place-map-sheet" role="dialog" aria-modal="true" aria-labelledby="place-map-title">
+      <header><h2 id="place-map-title">地点地图</h2><button id="place-map-close" type="button" aria-label="关闭地点地图">关闭</button></header>
+      <iframe id="place-map-frame" title="地点地图" src="about:blank" sandbox="allow-scripts allow-same-origin allow-forms" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+      <footer><p>地图需要能够访问 Google 的网络。若一直空白，请在系统浏览器中打开。</p><a id="place-map-external" target="_blank" rel="noopener noreferrer">用 Google Maps 打开 ↗</a></footer>
+    </section>
+  </div>
+
+  <div class="loading-error" id="loading-error" hidden>
+    <strong>行程暂时无法载入</strong>
+    <span>请确认 trip-data.json 已通过生成校验，并与网页位于同一目录。</span>
+  </div>
+</body>
+</html>
